@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfArchivo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Archivo Nombre="LOAFUNTT">
+    <Cabecera>
+      <Cabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-EESS</NombreCampo>
+        <NombreBaseDeDatos>CodigoEstacion</NombreBaseDeDatos>
+        <Descripcion>Código de Estación</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>0</Offset>
+      </Cabecera>
+      <Cabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA</NombreCampo>
+        <NombreBaseDeDatos>Fecha</NombreBaseDeDatos>
+        <Descripcion>Fecha de creacion archivo AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>5</Offset>
+      </Cabecera>
+      <Cabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA</NombreCampo>
+        <NombreBaseDeDatos>hora</NombreBaseDeDatos>
+        <Descripcion>Hora de creacion archivo HHMM</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>13</Offset>
+      </Cabecera>
+      <Cabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FRECAMBIO</NombreCampo>
+        <NombreBaseDeDatos>FlagRecambio</NombreBaseDeDatos>
+        <Descripcion>Flag de Actualización de Lista N = Novedades</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>17</Offset>
+      </Cabecera>
+      <Cabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>VERSIONACES</NombreCampo>
+        <NombreBaseDeDatos>version</NombreBaseDeDatos>
+        <Descripcion>Versión de los datos de Serviclub</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>18</Offset>
+      </Cabecera>
+    </Cabecera>
+    <Registro>
+      <Registro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>TIPO-TARJ</NombreCampo>
+        <NombreBaseDeDatos>TipoTarjeta</NombreBaseDeDatos>
+        <Descripcion>Tipo de Tarjeta</Descripcion>
+        <Longitud>2</Longitud>
+        <Offset>0</Offset>
+      </Registro>
+      <Registro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-FUN</NombreCampo>
+        <NombreBaseDeDatos>CondigoFuncionalidad</NombreBaseDeDatos>
+        <Descripcion>Código de la funcionalidad</Descripcion>
+        <Longitud>2</Longitud>
+        <Offset>2</Offset>
+      </Registro>
+      <Registro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HABILITA</NombreCampo>
+        <NombreBaseDeDatos>Habilita</NombreBaseDeDatos>
+        <Descripcion>Indica si la funcionalidad está habilitada o no.</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>4</Offset>
+      </Registro>
+    </Registro>
+  </Archivo>
+</ArrayOfArchivo>
