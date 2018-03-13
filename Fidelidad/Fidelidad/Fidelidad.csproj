@@ -52,7 +52,7 @@
     <Compile Include="Procesos\GenerarArchivoEESS.cs" />
     <Compile Include="Procesos\GenerarArchivoBaseDeDatos.cs" />
     <Compile Include="Procesos\GenerarConfiguracion.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOAFUNNTT - Copy.cs" />
+    <Compile Include="Procesos\Salida\Generadores\GenerarLOAPRE.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAFUNNTT.cs" />
     <Compile Include="Procesos\LeerConfiguracion.cs" />
     <Compile Include="Program.cs" />

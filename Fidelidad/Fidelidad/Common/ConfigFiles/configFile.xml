@@ -62,4 +62,137 @@
       </CampoRegistro>
     </CamposRegistro>
   </Archivo>
+  <Archivo Nombre="LOAPRE" IsUnixSaltoLinea="true">
+    <CamposCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-EESS</NombreCampo>
+        <NombreBaseDeDatos>CodigoEstacion</NombreBaseDeDatos>
+        <Descripcion>Código de Estación</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>0</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA</NombreCampo>
+        <NombreBaseDeDatos>Fecha</NombreBaseDeDatos>
+        <Descripcion>Fecha de creacion archivo AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>5</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA</NombreCampo>
+        <NombreBaseDeDatos>hora</NombreBaseDeDatos>
+        <Descripcion>Hora de creacion archivo HHMM</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>13</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FRECAMBIO</NombreCampo>
+        <NombreBaseDeDatos>FlagRecambio</NombreBaseDeDatos>
+        <Descripcion>Flag de Actualización de Lista N = Novedades</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>17</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA_APLI</NombreCampo>
+        <NombreBaseDeDatos>FechaAplicacion</NombreBaseDeDatos>
+        <Descripcion>Fecha de aplicación AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>18</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA</NombreCampo>
+        <NombreBaseDeDatos>horaAplicacion</NombreBaseDeDatos>
+        <Descripcion>Hora de aplicación HHMMSS</Descripcion>
+        <Longitud>6</Longitud>
+        <Offset>26</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>VERSIONACES</NombreCampo>
+        <NombreBaseDeDatos>version</NombreBaseDeDatos>
+        <Descripcion>Versión de los datos de Serviclub</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>32</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-MONE</NombreCampo>
+        <NombreBaseDeDatos>CodigoMoneda</NombreBaseDeDatos>
+        <Descripcion>Código de Moneda</Descripcion>
+        <Longitud>2</Longitud>
+        <Offset>37</Offset>
+      </CampoCabecera>
+    </CamposCabecera>
+    <CamposRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-PREMIO</NombreCampo>
+        <NombreBaseDeDatos>CodigoPremio</NombreBaseDeDatos>
+        <Descripcion>Código del premio</Descripcion>
+        <Longitud>6</Longitud>
+        <Offset>0</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>DESCR</NombreCampo>
+        <NombreBaseDeDatos>DescripcionPremio</NombreBaseDeDatos>
+        <Descripcion>Descripción del premio</Descripcion>
+        <Longitud>25</Longitud>
+        <Offset>6</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>DESCRC</NombreCampo>
+        <NombreBaseDeDatos>DescripcionCortaPremio</NombreBaseDeDatos>
+        <Descripcion>Descripción corta del premio</Descripcion>
+        <Longitud>20</Longitud>
+        <Offset>41</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>T-PREM</NombreCampo>
+        <NombreBaseDeDatos>TipoPremio</NombreBaseDeDatos>
+        <Descripcion>Tipo de premio</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>61</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>PUNTOS</NombreCampo>
+        <NombreBaseDeDatos>Puntos</NombreBaseDeDatos>
+        <Descripcion>Puntos requeridos para retirar el premio (puntos)</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>62</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>PUN-MON</NombreCampo>
+        <NombreBaseDeDatos>PuntosMonedas</NombreBaseDeDatos>
+        <Descripcion>Puntos requeridos para retirar el premio (moneda + puntos)</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>67</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>CANTM</NombreCampo>
+        <NombreBaseDeDatos>CantMonedas</NombreBaseDeDatos>
+        <Descripcion>Cantidad de Moneda</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>72</Offset>
+        <Formato>00</Formato>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>ESTADO</NombreCampo>
+        <NombreBaseDeDatos>Estado</NombreBaseDeDatos>
+        <Descripcion>Estado del premio</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>80</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>CODTEXV</NombreCampo>
+        <NombreBaseDeDatos>DescripcionCortaPremio</NombreBaseDeDatos>
+        <Descripcion>cod de voucher (solo para premios especiales)</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>81</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>DESCRC</NombreCampo>
+        <NombreBaseDeDatos>DescripcionCortaPremio</NombreBaseDeDatos>
+        <Descripcion>Descripción corta del premio</Descripcion>
+        <Longitud>20</Longitud>
+        <Offset>41</Offset>
+      </CampoRegistro>
+    </CamposRegistro>
+  </Archivo>
 </ArrayOfArchivo>
