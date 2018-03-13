@@ -16,11 +16,11 @@ namespace Fidelidad.Procesos
         public static void Generar(string NombreArchivo)
         {
             DataSet dataSet = new DataSet();
-            dataSet.ReadXml(@"C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\DataAccess\mock 1.xml");
+            dataSet.ReadXml(Constantes.UrlMockLOAFUNTT);
 
             var archivo = ObtenerConfiguracion.Obtener(NombreArchivo);
 
-            using (StreamWriter writer = new StreamWriter(@"C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\bin\Debug\" + NombreArchivo + ".dsc", false, Encoding.UTF8))
+            using (StreamWriter writer = new StreamWriter(Constantes.DirectorioArchivosDeSalida + NombreArchivo + ".dsc", false, Encoding.UTF8))
             {
                 if (archivo.IsUnixSaltoLinea)
                 {

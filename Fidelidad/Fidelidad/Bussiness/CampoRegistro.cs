@@ -9,6 +9,7 @@ namespace Fidelidad.Config
     [Serializable]
     public class CampoRegistro : RegistroBase
     {
+        public string Formato { get; set; }
 
     }
 }

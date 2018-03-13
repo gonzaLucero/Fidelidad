@@ -1,6 +1,7 @@
 ﻿using Fidelidad.Config;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,11 +14,19 @@ namespace Fidelidad.Procesos
     {
         public static Archivo Obtener(string NombreArchivo)
         {
-            var xml = XDocument.Load(Constantes.ArchivoDeConfiguracion + ".xml");
-            var serializer = new XmlSerializer(typeof(List<Archivo>));
-            var list = serializer.Deserialize(xml.Root.CreateReader());
-            var archivo = ((List<Archivo>)list).SingleOrDefault(arch => arch.Nombre == NombreArchivo);
-            return archivo;
+            try
+            {
+                var xml = XDocument.Load(Constantes.ArchivoDeConfiguracion + ".xml");
+                var serializer = new XmlSerializer(typeof(List<Archivo>));
+                var list = serializer.Deserialize(xml.Root.CreateReader());
+                var archivo = ((List<Archivo>)list).SingleOrDefault(arch => arch.Nombre == NombreArchivo);
+                return archivo;
+            }
+            catch (FileNotFoundException e)
+            {
+                Console.Write(NombreArchivo + " archivo no encontrado.");
+                throw;
+            }
         }
     }
 }

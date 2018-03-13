@@ -52,8 +52,8 @@
     <Compile Include="Procesos\GenerarArchivoEESS.cs" />
     <Compile Include="Procesos\GenerarArchivoBaseDeDatos.cs" />
     <Compile Include="Procesos\GenerarConfiguracion.cs" />
-    <Compile Include="Procesos\Archivos de Salida\GenerarLOAFUNNTT - Copy.cs" />
-    <Compile Include="Procesos\Archivos de Salida\GenerarLOAFUNNTT.cs" />
+    <Compile Include="Procesos\Salida\Generadores\GenerarLOAFUNNTT - Copy.cs" />
+    <Compile Include="Procesos\Salida\Generadores\GenerarLOAFUNNTT.cs" />
     <Compile Include="Procesos\LeerConfiguracion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,10 +70,13 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Procesos\Entrada\Archivos\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Common\ConfigFiles\configFile.xml" />
-    <Content Include="DataAccess\mock 1.xml" />
+    <Content Include="DataAccess\mockLOAFUNTT.xml" />
+    <Content Include="Procesos\Salida\Archivos\LOAFUNTT.dsc" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
