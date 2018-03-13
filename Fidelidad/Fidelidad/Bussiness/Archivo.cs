@@ -15,7 +15,12 @@ namespace Fidelidad.Config
 
         [XmlAttribute]
         public string OrigenDatos { get; set; }
-        public List<CampoCabecera> Cabecera { get; set; }
-        public List<CampoRegistro> Registro { get; set; }
+
+        [XmlAttribute]
+        public bool IsUnixSaltoLinea { get; set; }
+
+        public List<CampoCabecera> CamposCabecera { get; set; }
+
+        public List<CampoRegistro> CamposRegistro { get; set; }
     }
 }

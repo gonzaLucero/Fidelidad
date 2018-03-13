@@ -24,7 +24,7 @@ namespace Fidelidad.Procesos
             {
                 DataSet dataSet = new DataSet();
                 DataTable dataTable = new DataTable();
-                foreach (var item in archivo.Cabecera)
+                foreach (var item in archivo.CamposCabecera)
                 {
                     DataColumn dataColumn = new DataColumn();
                     dataColumn.ColumnName = item.NombreBaseDeDatos;
@@ -33,7 +33,7 @@ namespace Fidelidad.Procesos
                 dataSet.Tables.Add(dataTable);
 
                 dataTable = new DataTable();
-                foreach (var item in archivo.Registro)
+                foreach (var item in archivo.CamposRegistro)
                 {
                     DataColumn dataColumn = new DataColumn();
                     dataColumn.ColumnName = item.NombreBaseDeDatos;

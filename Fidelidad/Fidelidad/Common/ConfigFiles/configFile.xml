@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfArchivo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Archivo Nombre="LOAFUNTT" IsUnixSaltoLinea="true">
-    <Cabecera>
+    <CamposCabecera>
       <CampoCabecera PadCaracter="48" IsPadLeft="true">
         <NombreCampo>COD-EESS</NombreCampo>
         <NombreBaseDeDatos>CodigoEstacion</NombreBaseDeDatos>
@@ -37,8 +37,8 @@
         <Longitud>5</Longitud>
         <Offset>18</Offset>
       </CampoCabecera>
-    </Cabecera>
-    <Registro>
+    </CamposCabecera>
+    <CamposRegistro>
       <CampoRegistro PadCaracter="48" IsPadLeft="true">
         <NombreCampo>TIPO-TARJ</NombreCampo>
         <NombreBaseDeDatos>TipoTarjeta</NombreBaseDeDatos>
@@ -60,6 +60,6 @@
         <Longitud>1</Longitud>
         <Offset>4</Offset>
       </CampoRegistro>
-    </Registro>
+    </CamposRegistro>
   </Archivo>
 </ArrayOfArchivo>

@@ -8,6 +8,7 @@ namespace Fidelidad.Config
 {
     public static class Constantes
     {
-        public const string ArchivoDeConfiguracion = "config";
+        public const string ArchivoDeConfiguracion = @"..\..\Common\ConfigFiles\configFile";
+
     }
 }

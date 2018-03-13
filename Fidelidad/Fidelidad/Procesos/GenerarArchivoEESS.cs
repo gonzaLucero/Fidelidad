@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,43 +15,36 @@ namespace Fidelidad.Procesos
     {
         public static void Generar(string NombreArchivo)
         {
-            //TODO: 
-            //      Rellenar registros con el caracter configurado
-            //      Exportar a un archivo txt
-
-            //      Obterner los datos de la base de datos
             DataSet dataSet = new DataSet();
             dataSet.ReadXml(@"C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\DataAccess\mock 1.xml");
 
-            //      Leer configuracion del archivo a generar
-            var xml = XDocument.Load(Constantes.ArchivoDeConfiguracion + ".xml");
-            var serializer = new XmlSerializer(typeof(List<Archivo>));
-            var list = serializer.Deserialize(xml.Root.CreateReader());
-            var archivo = ((List<Archivo>)list).FirstOrDefault(arch => arch.Nombre == NombreArchivo);
+            var archivo = ObtenerConfiguracion.Obtener(NombreArchivo);
 
-            using (System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\bin\Debug\WriteLines2.txt"))
+            using (StreamWriter writer = new StreamWriter(@"C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\bin\Debug\" + NombreArchivo + ".dsc", false, Encoding.UTF8))
             {
-                //      Mappear cabecera y registros
-                string linea = "";
-                foreach (var item in archivo.Cabecera)
+                if (archivo.IsUnixSaltoLinea)
+                {
+                    writer.NewLine = "\r";
+                }
+                string linea = string.Empty;
+                foreach (var item in archivo.CamposCabecera)
                 {
                     var campo = dataSet.Tables[1].Rows[0][item.NombreBaseDeDatos].ToString();
                     campo = CompletarRegistro(campo, item.PadCaracter, item.Longitud, item.IsPadLeft);
                     linea += campo;
                 }
-                file.WriteLine(linea);
+                writer.WriteLine(linea);
 
-                foreach (var item in archivo.Registro)
+                foreach (DataRow row in dataSet.Tables[2].Rows)
                 {
-                    linea = "";
-                    var campo="";
-                    foreach (DataRow row in dataSet.Tables[2].Rows)
+                    linea = string.Empty;
+                    foreach (var item in archivo.CamposRegistro.OrderBy(reg => reg.Offset))
                     {
-                        campo = row.Field<string>(item.NombreBaseDeDatos);
+                        var campo = row.Field<string>(item.NombreBaseDeDatos);
                         campo = CompletarRegistro(campo, item.PadCaracter, item.Longitud, item.IsPadLeft);
-                        linea += campo + '\n';
+                        linea += campo;
                     }
-                    file.Write(linea);
+                    writer.WriteLine(linea);
                 }
             }
         }
