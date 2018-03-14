@@ -54,6 +54,9 @@
     <Compile Include="Procesos\GenerarArchivoBaseDeDatos.cs" />
     <Compile Include="Procesos\GenerarConfiguracion.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAPARAM.cs" />
+    <Compile Include="Procesos\Salida\Generadores\GenerarLOAMENSA.cs" />
+    <Compile Include="Procesos\Salida\Generadores\GenerarLOAPROTT.cs" />
+    <Compile Include="Procesos\Salida\Generadores\GenerarLOATEXTO.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAPRTTF.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOARUBRO.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAPRE.cs" />
@@ -82,6 +85,7 @@
     <Content Include="DataAccess\mockLOAFUNTT.xml" />
     <Content Include="DataAccess\mockLOAPRE.xml" />
     <Content Include="Procesos\Salida\Archivos\LOAFUNTT.dsc" />
+    <Content Include="Procesos\Salida\Archivos\LOAPRE.dsc" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
