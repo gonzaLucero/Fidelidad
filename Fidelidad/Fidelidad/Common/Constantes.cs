@@ -12,7 +12,9 @@ namespace Fidelidad.Config
 
         public const string DirectorioArchivosDeSalida = @"..\..\Procesos\Salida\Archivos\";
 
-        public const string UrlMockLOAFUNTT = @"C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\DataAccess\mockLOAFUNTT.xml";
+        public const string UrlMockLOAFUNTT = @"..\..\DataAccess\mockLOAFUNTT.xml";
+
+        public const string UrlMockLOAPRE = @"..\..\DataAccess\mockLOAPRE.xml";
 
     }
 }

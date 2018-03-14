@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfArchivo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Archivo Nombre="LOAFUNTT" IsUnixSaltoLinea="true">
+  <Archivo Nombre="LOAFUNTT" OrigenDatos="mockLOAFUNTT" IsUnixSaltoLinea="true">
     <CamposCabecera>
       <CampoCabecera PadCaracter="48" IsPadLeft="true">
         <NombreCampo>COD-EESS</NombreCampo>
@@ -62,7 +62,7 @@
       </CampoRegistro>
     </CamposRegistro>
   </Archivo>
-  <Archivo Nombre="LOAPRE" IsUnixSaltoLinea="true">
+  <Archivo Nombre="LOAPRE" OrigenDatos="mockLOAPRE" IsUnixSaltoLinea="true">
     <CamposCabecera>
       <CampoCabecera PadCaracter="48" IsPadLeft="true">
         <NombreCampo>COD-EESS</NombreCampo>
@@ -100,7 +100,7 @@
         <Offset>18</Offset>
       </CampoCabecera>
       <CampoCabecera PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>HORA</NombreCampo>
+        <NombreCampo>HORA_APLI</NombreCampo>
         <NombreBaseDeDatos>horaAplicacion</NombreBaseDeDatos>
         <Descripcion>Hora de aplicación HHMMSS</Descripcion>
         <Longitud>6</Longitud>
@@ -129,14 +129,14 @@
         <Longitud>6</Longitud>
         <Offset>0</Offset>
       </CampoRegistro>
-      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
         <NombreCampo>DESCR</NombreCampo>
         <NombreBaseDeDatos>DescripcionPremio</NombreBaseDeDatos>
         <Descripcion>Descripción del premio</Descripcion>
-        <Longitud>25</Longitud>
+        <Longitud>35</Longitud>
         <Offset>6</Offset>
       </CampoRegistro>
-      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
         <NombreCampo>DESCRC</NombreCampo>
         <NombreBaseDeDatos>DescripcionCortaPremio</NombreBaseDeDatos>
         <Descripcion>Descripción corta del premio</Descripcion>
@@ -173,6 +173,13 @@
         <Formato>00</Formato>
       </CampoRegistro>
       <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>OPCION</NombreCampo>
+        <NombreBaseDeDatos>Opcion</NombreBaseDeDatos>
+        <Descripcion>Elección de los puntos para retirar el premio.</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>79</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
         <NombreCampo>ESTADO</NombreCampo>
         <NombreBaseDeDatos>Estado</NombreBaseDeDatos>
         <Descripcion>Estado del premio</Descripcion>
@@ -181,17 +188,135 @@
       </CampoRegistro>
       <CampoRegistro PadCaracter="48" IsPadLeft="true">
         <NombreCampo>CODTEXV</NombreCampo>
-        <NombreBaseDeDatos>DescripcionCortaPremio</NombreBaseDeDatos>
+        <NombreBaseDeDatos>CodigoVoucher</NombreBaseDeDatos>
         <Descripcion>cod de voucher (solo para premios especiales)</Descripcion>
         <Longitud>4</Longitud>
         <Offset>81</Offset>
       </CampoRegistro>
+    </CamposRegistro>
+  </Archivo>
+  <Archivo Nombre="LOARUBRO" OrigenDatos="mockLOARUBRO" IsUnixSaltoLinea="true">
+    <CamposCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-EESS</NombreCampo>
+        <NombreBaseDeDatos>CodigoEstacion</NombreBaseDeDatos>
+        <Descripcion>Código de Estación</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>0</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA</NombreCampo>
+        <NombreBaseDeDatos>Fecha</NombreBaseDeDatos>
+        <Descripcion>Fecha de creacion archivo AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>5</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA</NombreCampo>
+        <NombreBaseDeDatos>hora</NombreBaseDeDatos>
+        <Descripcion>Hora de creacion archivo HHMM</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>13</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FRECAMBIO</NombreCampo>
+        <NombreBaseDeDatos>FlagRecambio</NombreBaseDeDatos>
+        <Descripcion>Flag de Actualización de Lista N = Novedades</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>17</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA_APLI</NombreCampo>
+        <NombreBaseDeDatos>FechaAplicacion</NombreBaseDeDatos>
+        <Descripcion>Fecha de aplicación AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>18</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA_APLI</NombreCampo>
+        <NombreBaseDeDatos>horaAplicacion</NombreBaseDeDatos>
+        <Descripcion>Hora de aplicación HHMMSS</Descripcion>
+        <Longitud>6</Longitud>
+        <Offset>26</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>VERSIONACES</NombreCampo>
+        <NombreBaseDeDatos>version</NombreBaseDeDatos>
+        <Descripcion>Versión de los datos de Serviclub</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>32</Offset>
+      </CampoCabecera>
+    </CamposCabecera>
+    <CamposRegistro>
       <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-RUBRO</NombreCampo>
+        <NombreBaseDeDatos>CodigoRubro</NombreBaseDeDatos>
+        <Descripcion>Código del rubro</Descripcion>
+        <Longitud>3</Longitud>
+        <Offset>0</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
+        <NombreCampo>DESCR</NombreCampo>
+        <NombreBaseDeDatos>DescripcionRubro</NombreBaseDeDatos>
+        <Descripcion>Descripción del rubro</Descripcion>
+        <Longitud>35</Longitud>
+        <Offset>3</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
         <NombreCampo>DESCRC</NombreCampo>
-        <NombreBaseDeDatos>DescripcionCortaPremio</NombreBaseDeDatos>
-        <Descripcion>Descripción corta del premio</Descripcion>
+        <NombreBaseDeDatos>DescripcionCortaRubro</NombreBaseDeDatos>
+        <Descripcion>Descripción corta del rubro</Descripcion>
         <Longitud>20</Longitud>
-        <Offset>41</Offset>
+        <Offset>38</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-PG</NombreCampo>
+        <NombreBaseDeDatos>CodigoProductoGenerico</NombreBaseDeDatos>
+        <Descripcion>Código del Producto Genérico</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>58</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>ESTAR</NombreCampo>
+        <NombreBaseDeDatos>EstadoRubro</NombreBaseDeDatos>
+        <Descripcion>Estado del rubro</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>63</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>TIPO-TARJ</NombreCampo>
+        <NombreBaseDeDatos>TipoTarjeta</NombreBaseDeDatos>
+        <Descripcion>Tipo de Tarjeta</Descripcion>
+        <Longitud>2</Longitud>
+        <Offset>64</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>PROMOCION</NombreCampo>
+        <NombreBaseDeDatos>CantMonedas</NombreBaseDeDatos>
+        <Descripcion>Indica si es un rubro promoción o no</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>66</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>MAX-COMBUST-DIA-LITROS</NombreCampo>
+        <NombreBaseDeDatos>MaxCombustible</NombreBaseDeDatos>
+        <Descripcion>Indica el maximo diario de combustible (litros) vigente por tipode tarjeta y por rubros.</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>67</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>MAX-RUBRO-DIA-MONEDA</NombreCampo>
+        <NombreBaseDeDatos>MaxRubroDia</NombreBaseDeDatos>
+        <Descripcion>Indica el maximo diario vigente del rubro, distinto a combustibles, en $. (Por tipo de tarjeta y rubro)</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>74</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>MAX-RUBRO-MES-MONEDA</NombreCampo>
+        <NombreBaseDeDatos>MaxRubroMes</NombreBaseDeDatos>
+        <Descripcion>Indica el maximo mensual vigente del rubro, distinto a combustibles, en $. (Por tipo de tarjeta y rubro)</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>81</Offset>
       </CampoRegistro>
     </CamposRegistro>
   </Archivo>

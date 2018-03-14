@@ -5,3 +5,10 @@ C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\obj\Debug\F
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\obj\Debug\Fidelidad.csproj.CoreCompileInputs.cache
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\obj\Debug\Fidelidad.exe
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\obj\Debug\Fidelidad.pdb
+C:\Desarrollo\Fidelidad\Fidelidad\Fidelidad\bin\Debug\Fidelidad.exe.config
+C:\Desarrollo\Fidelidad\Fidelidad\Fidelidad\bin\Debug\Fidelidad.exe
+C:\Desarrollo\Fidelidad\Fidelidad\Fidelidad\bin\Debug\Fidelidad.pdb
+C:\Desarrollo\Fidelidad\Fidelidad\Fidelidad\obj\Debug\Fidelidad.csprojResolveAssemblyReference.cache
+C:\Desarrollo\Fidelidad\Fidelidad\Fidelidad\obj\Debug\Fidelidad.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Fidelidad\Fidelidad\Fidelidad\obj\Debug\Fidelidad.exe
+C:\Desarrollo\Fidelidad\Fidelidad\Fidelidad\obj\Debug\Fidelidad.pdb

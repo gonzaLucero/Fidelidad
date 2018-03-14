@@ -49,11 +49,13 @@
     <Compile Include="Common\Constantes.cs" />
     <Compile Include="Bussiness\CampoRegistro.cs" />
     <Compile Include="Bussiness\RegistroBase.cs" />
+    <Compile Include="DataAccess\ArchivosMock.cs" />
     <Compile Include="Procesos\GenerarArchivoEESS.cs" />
     <Compile Include="Procesos\GenerarArchivoBaseDeDatos.cs" />
     <Compile Include="Procesos\GenerarConfiguracion.cs" />
+    <Compile Include="Procesos\Salida\Generadores\GenerarLOARUBRO.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAPRE.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOAFUNNTT.cs" />
+    <Compile Include="Procesos\Salida\Generadores\GenerarLOAFUNTT.cs" />
     <Compile Include="Procesos\LeerConfiguracion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +78,7 @@
   <ItemGroup>
     <Content Include="Common\ConfigFiles\configFile.xml" />
     <Content Include="DataAccess\mockLOAFUNTT.xml" />
+    <Content Include="DataAccess\mockLOAPRE.xml" />
     <Content Include="Procesos\Salida\Archivos\LOAFUNTT.dsc" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

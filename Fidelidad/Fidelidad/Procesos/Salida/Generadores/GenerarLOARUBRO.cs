@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace Fidelidad.Procesos
 {
-    public static class GenerarLOAPRE
+    public static class GenerarLOARUBRO
     {
-
         public static Archivo Generar()
         {
             Archivo archivo = new Archivo()
             {
-                Nombre = "LOAPRE",
-                OrigenDatos = "mockLOAPRE",
+                Nombre = "LOARUBRO",
+                OrigenDatos = "mockLOARUBRO",
                 IsUnixSaltoLinea = true
             };
             archivo.CamposCabecera = GenerarCabecera();
@@ -112,18 +111,6 @@ namespace Fidelidad.Procesos
             };
             cabeceraList.Add(cabecera);
 
-            cabecera = new CampoCabecera()
-            {
-                NombreCampo = "COD-MONE",
-                NombreBaseDeDatos = "CodigoMoneda",
-                Descripcion = "Código de Moneda",
-                Longitud = 2,
-                Offset = 37,
-                PadCaracter = '0',
-                IsPadLeft = true
-            };
-            cabeceraList.Add(cabecera);
-
             return cabeceraList;
         }
 
@@ -133,10 +120,10 @@ namespace Fidelidad.Procesos
 
             CampoRegistro regsitro = new CampoRegistro()
             {
-                NombreCampo = "COD-PREMIO",
-                NombreBaseDeDatos = "CodigoPremio",
-                Descripcion = "Código del premio",
-                Longitud = 6,
+                NombreCampo = "COD-RUBRO",
+                NombreBaseDeDatos = "CodigoRubro",
+                Descripcion = "Código del rubro",
+                Longitud = 3,
                 Offset = 0,
                 PadCaracter = '0',
                 IsPadLeft = true
@@ -146,10 +133,10 @@ namespace Fidelidad.Procesos
             regsitro = new CampoRegistro()
             {
                 NombreCampo = "DESCR",
-                NombreBaseDeDatos = "DescripcionPremio",
-                Descripcion = "Descripción del premio",
+                NombreBaseDeDatos = "DescripcionRubro",
+                Descripcion = "Descripción del rubro",
                 Longitud = 35,
-                Offset = 6,
+                Offset = 3,
                 PadCaracter = ' ',
                 IsPadLeft = false
             };
@@ -158,10 +145,10 @@ namespace Fidelidad.Procesos
             regsitro = new CampoRegistro()
             {
                 NombreCampo = "DESCRC",
-                NombreBaseDeDatos = "DescripcionCortaPremio",
-                Descripcion = "Descripción corta del premio",
+                NombreBaseDeDatos = "DescripcionCortaRubro",
+                Descripcion = "Descripción corta del rubro",
                 Longitud = 20,
-                Offset = 41,
+                Offset = 38,
                 PadCaracter = ' ',
                 IsPadLeft = false
             };
@@ -169,11 +156,23 @@ namespace Fidelidad.Procesos
 
             regsitro = new CampoRegistro()
             {
-                NombreCampo = "T-PREM",
-                NombreBaseDeDatos = "TipoPremio",
-                Descripcion = "Tipo de premio",
+                NombreCampo = "COD-PG",
+                NombreBaseDeDatos = "CodigoProductoGenerico",
+                Descripcion = "Código del Producto Genérico",
+                Longitud = 5,
+                Offset = 58,
+                PadCaracter = '0',
+                IsPadLeft = true
+            };
+            registroList.Add(regsitro);
+
+            regsitro = new CampoRegistro()
+            {
+                NombreCampo = "ESTAR",
+                NombreBaseDeDatos = "EstadoRubro",
+                Descripcion = "Estado del rubro",
                 Longitud = 1,
-                Offset = 61,
+                Offset = 63,
                 PadCaracter = '0',
                 IsPadLeft = true
             };
@@ -181,11 +180,11 @@ namespace Fidelidad.Procesos
 
             regsitro = new CampoRegistro()
             {
-                NombreCampo = "PUNTOS",
-                NombreBaseDeDatos = "Puntos",
-                Descripcion = "Puntos requeridos para retirar el premio (puntos)",
-                Longitud = 5,
-                Offset = 62,
+                NombreCampo = "TIPO-TARJ",
+                NombreBaseDeDatos = "TipoTarjeta",
+                Descripcion = "Tipo de Tarjeta",
+                Longitud = 2,
+                Offset = 64,
                 PadCaracter = '0',
                 IsPadLeft = true
             };
@@ -193,10 +192,22 @@ namespace Fidelidad.Procesos
 
             regsitro = new CampoRegistro()
             {
-                NombreCampo = "PUN-MON",
-                NombreBaseDeDatos = "PuntosMonedas",
-                Descripcion = "Puntos requeridos para retirar el premio (moneda + puntos)",
-                Longitud = 5,
+                NombreCampo = "PROMOCION",
+                NombreBaseDeDatos = "CantMonedas",
+                Descripcion = "Indica si es un rubro promoción o no",
+                Longitud = 1,
+                Offset = 66,
+                PadCaracter = '0',
+                IsPadLeft = true
+            };
+            registroList.Add(regsitro);
+
+            regsitro = new CampoRegistro()
+            {
+                NombreCampo = "MAX-COMBUST-DIA-LITROS",
+                NombreBaseDeDatos = "MaxCombustible",
+                Descripcion = "Indica el maximo diario de combustible (litros) vigente por tipode tarjeta y por rubros.",
+                Longitud = 7,
                 Offset = 67,
                 PadCaracter = '0',
                 IsPadLeft = true
@@ -205,12 +216,11 @@ namespace Fidelidad.Procesos
 
             regsitro = new CampoRegistro()
             {
-                NombreCampo = "CANTM",
-                NombreBaseDeDatos = "CantMonedas",
-                Descripcion = "Cantidad de Moneda",
-                Formato = "00",
+                NombreCampo = "MAX-RUBRO-DIA-MONEDA",
+                NombreBaseDeDatos = "MaxRubroDia",
+                Descripcion = "Indica el maximo diario vigente del rubro, distinto a combustibles, en $. (Por tipo de tarjeta y rubro)",
                 Longitud = 7,
-                Offset = 72,
+                Offset = 74,
                 PadCaracter = '0',
                 IsPadLeft = true
             };
@@ -218,34 +228,10 @@ namespace Fidelidad.Procesos
 
             regsitro = new CampoRegistro()
             {
-                NombreCampo = "OPCION",
-                NombreBaseDeDatos = "Opcion",
-                Descripcion = "Elección de los puntos para retirar el premio.",
-                Longitud = 1,
-                Offset = 79,
-                PadCaracter = '0',
-                IsPadLeft = true
-            };
-            registroList.Add(regsitro);
-
-            regsitro = new CampoRegistro()
-            {
-                NombreCampo = "ESTADO",
-                NombreBaseDeDatos = "Estado",
-                Descripcion = "Estado del premio",
-                Longitud = 1,
-                Offset = 80,
-                PadCaracter = '0',
-                IsPadLeft = true
-            };
-            registroList.Add(regsitro);
-
-            regsitro = new CampoRegistro()
-            {
-                NombreCampo = "CODTEXV",
-                NombreBaseDeDatos = "CodigoVoucher",
-                Descripcion = "cod de voucher (solo para premios especiales)",
-                Longitud = 4,
+                NombreCampo = "MAX-RUBRO-MES-MONEDA",
+                NombreBaseDeDatos = "MaxRubroMes",
+                Descripcion = "Indica el maximo mensual vigente del rubro, distinto a combustibles, en $. (Por tipo de tarjeta y rubro)",
+                Longitud = 7,
                 Offset = 81,
                 PadCaracter = '0',
                 IsPadLeft = true

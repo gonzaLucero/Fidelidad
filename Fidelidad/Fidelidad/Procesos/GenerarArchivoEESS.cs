@@ -1,4 +1,5 @@
 ﻿using Fidelidad.Config;
+using Fidelidad.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,10 +16,9 @@ namespace Fidelidad.Procesos
     {
         public static void Generar(string NombreArchivo)
         {
-            DataSet dataSet = new DataSet();
-            dataSet.ReadXml(Constantes.UrlMockLOAFUNTT);
-
             var archivo = ObtenerConfiguracion.Obtener(NombreArchivo);
+            DataSet dataSet = new DataSet();
+            dataSet.ReadXml(ArchivosMock.ObtenerArchivoMock(archivo.OrigenDatos));
 
             using (StreamWriter writer = new StreamWriter(Constantes.DirectorioArchivosDeSalida + NombreArchivo + ".dsc", false, Encoding.UTF8))
             {

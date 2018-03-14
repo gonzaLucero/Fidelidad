@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Fidelidad.Procesos
 {
-    public static class GenerarLOAFUNNTT
+    public static class GenerarLOAFUNTT
     {
 
         public static Archivo Generar()
@@ -15,6 +15,7 @@ namespace Fidelidad.Procesos
             Archivo archivo = new Archivo()
             {
                 Nombre = "LOAFUNTT",
+                OrigenDatos = "mockLOAFUNTT",
                 IsUnixSaltoLinea = true
             };
             archivo.CamposCabecera = GenerarCabecera();

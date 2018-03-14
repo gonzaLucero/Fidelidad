@@ -25,8 +25,9 @@ namespace Fidelidad.Procesos
         {
             IList<Archivo> listConfig = new List<Archivo>();
 
-            listConfig.Add(GenerarLOAFUNNTT.Generar());
+            listConfig.Add(GenerarLOAFUNTT.Generar());
             listConfig.Add(GenerarLOAPRE.Generar());
+            listConfig.Add(GenerarLOARUBRO.Generar());
 
             return listConfig;
 
