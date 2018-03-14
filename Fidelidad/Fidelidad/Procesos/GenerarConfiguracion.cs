@@ -28,6 +28,7 @@ namespace Fidelidad.Procesos
             listConfig.Add(GenerarLOAFUNTT.Generar());
             listConfig.Add(GenerarLOAPRE.Generar());
             listConfig.Add(GenerarLOARUBRO.Generar());
+            listConfig.Add(GenerarLOAPRTTF.Generar());
 
             return listConfig;
 
