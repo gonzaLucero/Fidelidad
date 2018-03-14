@@ -53,6 +53,7 @@
     <Compile Include="Procesos\GenerarArchivoEESS.cs" />
     <Compile Include="Procesos\GenerarArchivoBaseDeDatos.cs" />
     <Compile Include="Procesos\GenerarConfiguracion.cs" />
+    <Compile Include="Procesos\Salida\Generadores\GenerarLOAPARAM.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAPRTTF.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOARUBRO.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAPRE.cs" />
