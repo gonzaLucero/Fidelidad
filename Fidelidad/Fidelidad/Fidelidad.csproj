@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="Bussiness\Archivo.cs" />
     <Compile Include="Bussiness\CampoCabecera.cs" />
-    <Compile Include="Bussiness\Configuracion.cs" />
     <Compile Include="Common\FuncionalidadTarjetas.cs" />
     <Compile Include="Common\Constantes.cs" />
     <Compile Include="Bussiness\CampoRegistro.cs" />
@@ -55,6 +54,7 @@
     <Compile Include="Procesos\GenerarConfiguracion.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAPARAM.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAMENSA.cs" />
+    <Compile Include="Procesos\Salida\Generadores\GenerarLOATTARJ.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAPROTT.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOATEXTO.cs" />
     <Compile Include="Procesos\Salida\Generadores\GenerarLOAPRTTF.cs" />

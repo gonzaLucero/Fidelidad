@@ -62,139 +62,6 @@
       </CampoRegistro>
     </CamposRegistro>
   </Archivo>
-  <Archivo Nombre="LOAPRE" OrigenDatos="mockLOAPRE" IsUnixSaltoLinea="true">
-    <CamposCabecera>
-      <CampoCabecera PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>COD-EESS</NombreCampo>
-        <NombreBaseDeDatos>CodigoEstacion</NombreBaseDeDatos>
-        <Descripcion>Código de Estación</Descripcion>
-        <Longitud>5</Longitud>
-        <Offset>0</Offset>
-      </CampoCabecera>
-      <CampoCabecera PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>FECHA</NombreCampo>
-        <NombreBaseDeDatos>Fecha</NombreBaseDeDatos>
-        <Descripcion>Fecha de creacion archivo AAAAMMDD</Descripcion>
-        <Longitud>8</Longitud>
-        <Offset>5</Offset>
-      </CampoCabecera>
-      <CampoCabecera PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>HORA</NombreCampo>
-        <NombreBaseDeDatos>hora</NombreBaseDeDatos>
-        <Descripcion>Hora de creacion archivo HHMM</Descripcion>
-        <Longitud>4</Longitud>
-        <Offset>13</Offset>
-      </CampoCabecera>
-      <CampoCabecera PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>FRECAMBIO</NombreCampo>
-        <NombreBaseDeDatos>FlagRecambio</NombreBaseDeDatos>
-        <Descripcion>Flag de Actualización de Lista N = Novedades</Descripcion>
-        <Longitud>1</Longitud>
-        <Offset>17</Offset>
-      </CampoCabecera>
-      <CampoCabecera PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>FECHA_APLI</NombreCampo>
-        <NombreBaseDeDatos>FechaAplicacion</NombreBaseDeDatos>
-        <Descripcion>Fecha de aplicación AAAAMMDD</Descripcion>
-        <Longitud>8</Longitud>
-        <Offset>18</Offset>
-      </CampoCabecera>
-      <CampoCabecera PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>HORA_APLI</NombreCampo>
-        <NombreBaseDeDatos>horaAplicacion</NombreBaseDeDatos>
-        <Descripcion>Hora de aplicación HHMMSS</Descripcion>
-        <Longitud>6</Longitud>
-        <Offset>26</Offset>
-      </CampoCabecera>
-      <CampoCabecera PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>VERSIONACES</NombreCampo>
-        <NombreBaseDeDatos>version</NombreBaseDeDatos>
-        <Descripcion>Versión de los datos de Serviclub</Descripcion>
-        <Longitud>5</Longitud>
-        <Offset>32</Offset>
-      </CampoCabecera>
-      <CampoCabecera PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>COD-MONE</NombreCampo>
-        <NombreBaseDeDatos>CodigoMoneda</NombreBaseDeDatos>
-        <Descripcion>Código de Moneda</Descripcion>
-        <Longitud>2</Longitud>
-        <Offset>37</Offset>
-      </CampoCabecera>
-    </CamposCabecera>
-    <CamposRegistro>
-      <CampoRegistro PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>COD-PREMIO</NombreCampo>
-        <NombreBaseDeDatos>CodigoPremio</NombreBaseDeDatos>
-        <Descripcion>Código del premio</Descripcion>
-        <Longitud>6</Longitud>
-        <Offset>0</Offset>
-      </CampoRegistro>
-      <CampoRegistro PadCaracter="32" IsPadLeft="false">
-        <NombreCampo>DESCR</NombreCampo>
-        <NombreBaseDeDatos>DescripcionPremio</NombreBaseDeDatos>
-        <Descripcion>Descripción del premio</Descripcion>
-        <Longitud>35</Longitud>
-        <Offset>6</Offset>
-      </CampoRegistro>
-      <CampoRegistro PadCaracter="32" IsPadLeft="false">
-        <NombreCampo>DESCRC</NombreCampo>
-        <NombreBaseDeDatos>DescripcionCortaPremio</NombreBaseDeDatos>
-        <Descripcion>Descripción corta del premio</Descripcion>
-        <Longitud>20</Longitud>
-        <Offset>41</Offset>
-      </CampoRegistro>
-      <CampoRegistro PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>T-PREM</NombreCampo>
-        <NombreBaseDeDatos>TipoPremio</NombreBaseDeDatos>
-        <Descripcion>Tipo de premio</Descripcion>
-        <Longitud>1</Longitud>
-        <Offset>61</Offset>
-      </CampoRegistro>
-      <CampoRegistro PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>PUNTOS</NombreCampo>
-        <NombreBaseDeDatos>Puntos</NombreBaseDeDatos>
-        <Descripcion>Puntos requeridos para retirar el premio (puntos)</Descripcion>
-        <Longitud>5</Longitud>
-        <Offset>62</Offset>
-      </CampoRegistro>
-      <CampoRegistro PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>PUN-MON</NombreCampo>
-        <NombreBaseDeDatos>PuntosMonedas</NombreBaseDeDatos>
-        <Descripcion>Puntos requeridos para retirar el premio (moneda + puntos)</Descripcion>
-        <Longitud>5</Longitud>
-        <Offset>67</Offset>
-      </CampoRegistro>
-      <CampoRegistro PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>CANTM</NombreCampo>
-        <NombreBaseDeDatos>CantMonedas</NombreBaseDeDatos>
-        <Descripcion>Cantidad de Moneda</Descripcion>
-        <Longitud>7</Longitud>
-        <Offset>72</Offset>
-        <Formato>00</Formato>
-      </CampoRegistro>
-      <CampoRegistro PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>OPCION</NombreCampo>
-        <NombreBaseDeDatos>Opcion</NombreBaseDeDatos>
-        <Descripcion>Elección de los puntos para retirar el premio.</Descripcion>
-        <Longitud>1</Longitud>
-        <Offset>79</Offset>
-      </CampoRegistro>
-      <CampoRegistro PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>ESTADO</NombreCampo>
-        <NombreBaseDeDatos>Estado</NombreBaseDeDatos>
-        <Descripcion>Estado del premio</Descripcion>
-        <Longitud>1</Longitud>
-        <Offset>80</Offset>
-      </CampoRegistro>
-      <CampoRegistro PadCaracter="48" IsPadLeft="true">
-        <NombreCampo>CODTEXV</NombreCampo>
-        <NombreBaseDeDatos>CodigoVoucher</NombreBaseDeDatos>
-        <Descripcion>cod de voucher (solo para premios especiales)</Descripcion>
-        <Longitud>4</Longitud>
-        <Offset>81</Offset>
-      </CampoRegistro>
-    </CamposRegistro>
-  </Archivo>
   <Archivo Nombre="LOARUBRO" OrigenDatos="mockLOARUBRO" IsUnixSaltoLinea="true">
     <CamposCabecera>
       <CampoCabecera PadCaracter="48" IsPadLeft="true">
@@ -463,6 +330,562 @@
         <Descripcion>Código de criterio</Descripcion>
         <Longitud>4</Longitud>
         <Offset>55</Offset>
+      </CampoRegistro>
+    </CamposRegistro>
+  </Archivo>
+  <Archivo Nombre="LOAPARAM" OrigenDatos="mockLOAPARAM" IsUnixSaltoLinea="true">
+    <CamposCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-EESS</NombreCampo>
+        <NombreBaseDeDatos>CodigoEstacion</NombreBaseDeDatos>
+        <Descripcion>Código de Estación</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>0</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA</NombreCampo>
+        <NombreBaseDeDatos>Fecha</NombreBaseDeDatos>
+        <Descripcion>Fecha de creacion archivo AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>5</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA</NombreCampo>
+        <NombreBaseDeDatos>hora</NombreBaseDeDatos>
+        <Descripcion>Hora de creacion archivo HHMM</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>13</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FRECAMBIO</NombreCampo>
+        <NombreBaseDeDatos>FlagRecambio</NombreBaseDeDatos>
+        <Descripcion>Flag de Actualización de Lista N = Novedades</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>17</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA_APLI</NombreCampo>
+        <NombreBaseDeDatos>FechaAplicacion</NombreBaseDeDatos>
+        <Descripcion>Fecha de aplicación AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>18</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA_APLI</NombreCampo>
+        <NombreBaseDeDatos>horaAplicacion</NombreBaseDeDatos>
+        <Descripcion>Hora de aplicación HHMMSS</Descripcion>
+        <Longitud>6</Longitud>
+        <Offset>26</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>VERSIONACES</NombreCampo>
+        <NombreBaseDeDatos>version</NombreBaseDeDatos>
+        <Descripcion>Versión de los datos de Serviclub</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>32</Offset>
+      </CampoCabecera>
+    </CamposCabecera>
+    <CamposRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>SECCION</NombreCampo>
+        <NombreBaseDeDatos>NombreSeccion</NombreBaseDeDatos>
+        <Descripcion>Nombre de la sección a modificar</Descripcion>
+        <Longitud>30</Longitud>
+        <Offset>0</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
+        <NombreCampo>KEY</NombreCampo>
+        <NombreBaseDeDatos>NombreElemento</NombreBaseDeDatos>
+        <Descripcion>Nombre del elemento a modificar</Descripcion>
+        <Longitud>40</Longitud>
+        <Offset>30</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
+        <NombreCampo>VALOR</NombreCampo>
+        <NombreBaseDeDatos>Valor</NombreBaseDeDatos>
+        <Descripcion>Valor para la actualización</Descripcion>
+        <Longitud>100</Longitud>
+        <Offset>70</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>TAM</NombreCampo>
+        <NombreBaseDeDatos>Tamanio</NombreBaseDeDatos>
+        <Descripcion>Tamaño del nuevo valor</Descripcion>
+        <Longitud>3</Longitud>
+        <Offset>170</Offset>
+      </CampoRegistro>
+    </CamposRegistro>
+  </Archivo>
+  <Archivo Nombre="LOAMENSA" OrigenDatos="mockLOAMENSA" IsUnixSaltoLinea="true">
+    <CamposCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-EESS</NombreCampo>
+        <NombreBaseDeDatos>CodigoEstacion</NombreBaseDeDatos>
+        <Descripcion>Código de Estación</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>0</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA</NombreCampo>
+        <NombreBaseDeDatos>Fecha</NombreBaseDeDatos>
+        <Descripcion>Fecha de creacion archivo AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>5</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA</NombreCampo>
+        <NombreBaseDeDatos>hora</NombreBaseDeDatos>
+        <Descripcion>Hora de creacion archivo HHMM</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>13</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FRECAMBIO</NombreCampo>
+        <NombreBaseDeDatos>FlagRecambio</NombreBaseDeDatos>
+        <Descripcion>Flag de Actualización de Lista N = Novedades</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>17</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>VERSIONACES</NombreCampo>
+        <NombreBaseDeDatos>version</NombreBaseDeDatos>
+        <Descripcion>Versión de los datos de Serviclub</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>18</Offset>
+      </CampoCabecera>
+    </CamposCabecera>
+    <CamposRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-MENSA</NombreCampo>
+        <NombreBaseDeDatos>CodigoMensaje</NombreBaseDeDatos>
+        <Descripcion>Código del mensaje</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>0</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
+        <NombreCampo>DESCR</NombreCampo>
+        <NombreBaseDeDatos>DescripcionMensaje</NombreBaseDeDatos>
+        <Descripcion>Descripción del mensaje</Descripcion>
+        <Longitud>35</Longitud>
+        <Offset>4</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
+        <NombreCampo>FEDESDE</NombreCampo>
+        <NombreBaseDeDatos>FechaDesde</NombreBaseDeDatos>
+        <Descripcion>Fecha de inicio de vigencia</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>39</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FEHASTA</NombreCampo>
+        <NombreBaseDeDatos>FechaHasta</NombreBaseDeDatos>
+        <Descripcion>Fecha de fin de vigencia</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>47</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-LISTA</NombreCampo>
+        <NombreBaseDeDatos>CodigoLista</NombreBaseDeDatos>
+        <Descripcion>Código de la lista</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>55</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-TEXTO</NombreCampo>
+        <NombreBaseDeDatos>CodigoTexto</NombreBaseDeDatos>
+        <Descripcion>Código de texto</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>59</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>AB</NombreCampo>
+        <NombreBaseDeDatos>AltaBaja</NombreBaseDeDatos>
+        <Descripcion>Alta o Baja de registros</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>63</Offset>
+        <Formato>00</Formato>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-CRITE</NombreCampo>
+        <NombreBaseDeDatos>CodigoCriterio</NombreBaseDeDatos>
+        <Descripcion>Código del criterio</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>64</Offset>
+      </CampoRegistro>
+    </CamposRegistro>
+  </Archivo>
+  <Archivo Nombre="LOATEXTO" OrigenDatos="mockLOATEXTO" IsUnixSaltoLinea="true">
+    <CamposCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-EESS</NombreCampo>
+        <NombreBaseDeDatos>CodigoEstacion</NombreBaseDeDatos>
+        <Descripcion>Código de Estación</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>0</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA</NombreCampo>
+        <NombreBaseDeDatos>Fecha</NombreBaseDeDatos>
+        <Descripcion>Fecha de creacion archivo AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>5</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA</NombreCampo>
+        <NombreBaseDeDatos>hora</NombreBaseDeDatos>
+        <Descripcion>Hora de creacion archivo HHMM</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>13</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FRECAMBIO</NombreCampo>
+        <NombreBaseDeDatos>FlagRecambio</NombreBaseDeDatos>
+        <Descripcion>Flag de Actualización de Lista N = Novedades</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>17</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>VERSIONACES</NombreCampo>
+        <NombreBaseDeDatos>version</NombreBaseDeDatos>
+        <Descripcion>Versión de los datos de Serviclub</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>18</Offset>
+      </CampoCabecera>
+    </CamposCabecera>
+    <CamposRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-TEXTO</NombreCampo>
+        <NombreBaseDeDatos>CodigoTexto</NombreBaseDeDatos>
+        <Descripcion>Código del texto</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>0</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
+        <NombreCampo>DESCR</NombreCampo>
+        <NombreBaseDeDatos>DescripcionMensaje</NombreBaseDeDatos>
+        <Descripcion>Descripción del mensaje</Descripcion>
+        <Longitud>35</Longitud>
+        <Offset>4</Offset>
+      </CampoRegistro>
+    </CamposRegistro>
+  </Archivo>
+  <Archivo Nombre="LOAPROTT" OrigenDatos="mockLOAPROTT" IsUnixSaltoLinea="true">
+    <CamposCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-EESS</NombreCampo>
+        <NombreBaseDeDatos>CodigoEstacion</NombreBaseDeDatos>
+        <Descripcion>Código de Estación</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>0</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA</NombreCampo>
+        <NombreBaseDeDatos>Fecha</NombreBaseDeDatos>
+        <Descripcion>Fecha de creacion archivo AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>5</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA</NombreCampo>
+        <NombreBaseDeDatos>hora</NombreBaseDeDatos>
+        <Descripcion>Hora de creacion archivo HHMM</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>13</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FRECAMBIO</NombreCampo>
+        <NombreBaseDeDatos>FlagRecambio</NombreBaseDeDatos>
+        <Descripcion>Flag de Actualización de Lista N = Novedades</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>17</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA_APLI</NombreCampo>
+        <NombreBaseDeDatos>FechaAplicacion</NombreBaseDeDatos>
+        <Descripcion>Fecha de aplicación AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>18</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA_APLI</NombreCampo>
+        <NombreBaseDeDatos>horaAplicacion</NombreBaseDeDatos>
+        <Descripcion>Hora de aplicación HHMMSS</Descripcion>
+        <Longitud>6</Longitud>
+        <Offset>26</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>VERSIONACES</NombreCampo>
+        <NombreBaseDeDatos>version</NombreBaseDeDatos>
+        <Descripcion>Versión de los datos de Serviclub</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>32</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-MONE</NombreCampo>
+        <NombreBaseDeDatos>CodigoMoneda</NombreBaseDeDatos>
+        <Descripcion>Código de Moneda</Descripcion>
+        <Longitud>2</Longitud>
+        <Offset>37</Offset>
+      </CampoCabecera>
+    </CamposCabecera>
+    <CamposRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-RUBRO</NombreCampo>
+        <NombreBaseDeDatos>CodigoRubro</NombreBaseDeDatos>
+        <Descripcion>Código del rubro</Descripcion>
+        <Longitud>3</Longitud>
+        <Offset>0</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-PROD</NombreCampo>
+        <NombreBaseDeDatos>CodigoProducto</NombreBaseDeDatos>
+        <Descripcion>Código del producto</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>0</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-PROD</NombreCampo>
+        <NombreBaseDeDatos>CodigoProducto</NombreBaseDeDatos>
+        <Descripcion>Código del producto</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>0</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
+        <NombreCampo>DESCR</NombreCampo>
+        <NombreBaseDeDatos>DescripcionProducto</NombreBaseDeDatos>
+        <Descripcion>Descripción del producto</Descripcion>
+        <Longitud>35</Longitud>
+        <Offset>28</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
+        <NombreCampo>DESCRC</NombreCampo>
+        <NombreBaseDeDatos>DescripcionCortaProducto</NombreBaseDeDatos>
+        <Descripcion>Descripción corta del producto</Descripcion>
+        <Longitud>20</Longitud>
+        <Offset>63</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>AUTORIZ</NombreCampo>
+        <NombreBaseDeDatos>Autorizacion</NombreBaseDeDatos>
+        <Descripcion>Autorización del administrador</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>83</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>CANTM</NombreCampo>
+        <NombreBaseDeDatos>CantidadMoneda</NombreBaseDeDatos>
+        <Descripcion>Moneda para la relación</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>84</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>LIM-MIN-PESOS</NombreCampo>
+        <NombreBaseDeDatos>LimiteMinimoPesos</NombreBaseDeDatos>
+        <Descripcion>Límite minimo en pesos</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>91</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>LIM-MIN-LITROS</NombreCampo>
+        <NombreBaseDeDatos>LimiteMinimoLitros</NombreBaseDeDatos>
+        <Descripcion>Límite minimo en litros</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>98</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>LIM-MAX-PESOS</NombreCampo>
+        <NombreBaseDeDatos>LimiteMaximoPesos</NombreBaseDeDatos>
+        <Descripcion>Límite maximo en pesos</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>105</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>LIM-MAX-LITROS</NombreCampo>
+        <NombreBaseDeDatos>LimiteMaximoLitros</NombreBaseDeDatos>
+        <Descripcion>Límite maximo en litros</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>112</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>PRIORI</NombreCampo>
+        <NombreBaseDeDatos>Priori</NombreBaseDeDatos>
+        <Descripcion>Prioridad para la asignación</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>119</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>ESTAP</NombreCampo>
+        <NombreBaseDeDatos>EstadoProducto</NombreBaseDeDatos>
+        <Descripcion>Estado del producto</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>120</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>PTOSREL</NombreCampo>
+        <NombreBaseDeDatos>Estado</NombreBaseDeDatos>
+        <Descripcion>Puntos para la relación</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>121</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-LISTA</NombreCampo>
+        <NombreBaseDeDatos>CodigoLista</NombreBaseDeDatos>
+        <Descripcion>Codigo de la lista</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>126</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-CRITE</NombreCampo>
+        <NombreBaseDeDatos>CodigoCriterio</NombreBaseDeDatos>
+        <Descripcion>Codigo de criterio</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>130</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>TIPO-TARJ</NombreCampo>
+        <NombreBaseDeDatos>TipoTarjeta</NombreBaseDeDatos>
+        <Descripcion>Tipo de tarjeta</Descripcion>
+        <Longitud>2</Longitud>
+        <Offset>134</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>LIM-DIA-MAX-PESO</NombreCampo>
+        <NombreBaseDeDatos>LimiteMaxPesos</NombreBaseDeDatos>
+        <Descripcion>Limite diario en pesos</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>136</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>LIM-DIA-MAX-LITRO</NombreCampo>
+        <NombreBaseDeDatos>LimiteMaxLitros</NombreBaseDeDatos>
+        <Descripcion>Limite diario en litros</Descripcion>
+        <Longitud>7</Longitud>
+        <Offset>143</Offset>
+      </CampoRegistro>
+    </CamposRegistro>
+  </Archivo>
+  <Archivo Nombre="LOATTARJ" OrigenDatos="mockLOATTARJ" IsUnixSaltoLinea="true">
+    <CamposCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>COD-EESS</NombreCampo>
+        <NombreBaseDeDatos>CodigoEstacion</NombreBaseDeDatos>
+        <Descripcion>Código de Estación</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>0</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECHA</NombreCampo>
+        <NombreBaseDeDatos>Fecha</NombreBaseDeDatos>
+        <Descripcion>Fecha de creacion archivo AAAAMMDD</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>5</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>HORA</NombreCampo>
+        <NombreBaseDeDatos>hora</NombreBaseDeDatos>
+        <Descripcion>Hora de creacion archivo HHMM</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>13</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FRECAMBIO</NombreCampo>
+        <NombreBaseDeDatos>FlagRecambio</NombreBaseDeDatos>
+        <Descripcion>Flag de Actualización de Lista N = Novedades</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>17</Offset>
+      </CampoCabecera>
+      <CampoCabecera PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>VERSIONACES</NombreCampo>
+        <NombreBaseDeDatos>version</NombreBaseDeDatos>
+        <Descripcion>Versión de los datos de Serviclub</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>18</Offset>
+      </CampoCabecera>
+    </CamposCabecera>
+    <CamposRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>TIPO-TARJ</NombreCampo>
+        <NombreBaseDeDatos>TipoTarjeta</NombreBaseDeDatos>
+        <Descripcion>Tipo de tarjeta</Descripcion>
+        <Longitud>2</Longitud>
+        <Offset>0</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="32" IsPadLeft="false">
+        <NombreCampo>DESCR</NombreCampo>
+        <NombreBaseDeDatos>DescripcionTipoTarjeta</NombreBaseDeDatos>
+        <Descripcion>Descripción del tipo de tarjeta</Descripcion>
+        <Longitud>35</Longitud>
+        <Offset>2</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>NRODESDE</NombreCampo>
+        <NombreBaseDeDatos>NumeroTarjetaDesde</NombreBaseDeDatos>
+        <Descripcion>Número de tarjeta desde</Descripcion>
+        <Longitud>16</Longitud>
+        <Offset>37</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>NROHASTA</NombreCampo>
+        <NombreBaseDeDatos>NumeroTarjetaHasta</NombreBaseDeDatos>
+        <Descripcion>Número de tarjeta hasta</Descripcion>
+        <Longitud>16</Longitud>
+        <Offset>53</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FEDESDE</NombreCampo>
+        <NombreBaseDeDatos>FechaDesde</NombreBaseDeDatos>
+        <Descripcion>Fecha de inicio vigencia</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>69</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FEHASTA</NombreCampo>
+        <NombreBaseDeDatos>FechaHasta</NombreBaseDeDatos>
+        <Descripcion>Fecha de fin vigencia</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>77</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>FECADU</NombreCampo>
+        <NombreBaseDeDatos>FechaCaducidad</NombreBaseDeDatos>
+        <Descripcion>Fecha de caducidad para vencimiento de puntos</Descripcion>
+        <Longitud>8</Longitud>
+        <Offset>85</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>VEN-PUNTOS</NombreCampo>
+        <NombreBaseDeDatos>ConVencimientoPuntos</NombreBaseDeDatos>
+        <Descripcion>Habilita-Inhabilita vencimiento de puntos</Descripcion>
+        <Longitud>1</Longitud>
+        <Offset>93</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>MAX-DIARIO</NombreCampo>
+        <NombreBaseDeDatos>MaxPuntoDia</NombreBaseDeDatos>
+        <Descripcion>Indica cual es la máxima cantidad de puntos que puede asignarse a una tarjeta en el mismo lote día sin solicitar autorización</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>94</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>MAX-SIN-AUTORIZ</NombreCampo>
+        <NombreBaseDeDatos>MaxPuntoSinAutoriz</NombreBaseDeDatos>
+        <Descripcion>Indica cual es la máxima cantidad de puntos que puede asignarse en una operación de carga de puntos sin solicitar autorización</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>98</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>IMPORTE-MAX</NombreCampo>
+        <NombreBaseDeDatos>MaxImporte</NombreBaseDeDatos>
+        <Descripcion>Indica cual es el importe hasta el cual no pedirá confirmación</Descripcion>
+        <Longitud>4</Longitud>
+        <Offset>102</Offset>
+      </CampoRegistro>
+      <CampoRegistro PadCaracter="48" IsPadLeft="true">
+        <NombreCampo>PUNTAJE-MAX</NombreCampo>
+        <NombreBaseDeDatos>MaxPuntaje</NombreBaseDeDatos>
+        <Descripcion>Indica el puntaje máximo de disponibles que podrá tener una tarjeta</Descripcion>
+        <Longitud>5</Longitud>
+        <Offset>106</Offset>
       </CampoRegistro>
     </CamposRegistro>
   </Archivo>

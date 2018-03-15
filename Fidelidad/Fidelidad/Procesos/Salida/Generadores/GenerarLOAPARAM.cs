@@ -14,8 +14,8 @@ namespace Fidelidad.Procesos
         {
             Archivo archivo = new Archivo()
             {
-                Nombre = "LOAPRE",
-                OrigenDatos = "mockLOAPRE",
+                Nombre = "LOAPARAM",
+                OrigenDatos = "mockLOAPARAM",
                 IsUnixSaltoLinea = true
             };
             archivo.CamposCabecera = GenerarCabecera();

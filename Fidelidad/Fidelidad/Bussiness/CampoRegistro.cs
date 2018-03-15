@@ -11,5 +11,7 @@ namespace Fidelidad.Config
     {
         public string Formato { get; set; }
 
+        public List<CampoRegistro> CamposHijo { get; set; }
+
     }
 }

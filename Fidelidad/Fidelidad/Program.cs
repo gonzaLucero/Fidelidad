@@ -17,7 +17,6 @@ namespace Fidelidad
             GenerarConfiguracion.Generar();
             GenerarArchivoBaseDeDatos.Generar("LOAFUNTT");
             GenerarArchivoEESS.Generar("LOAFUNTT");
-            GenerarArchivoEESS.Generar("LOAPRE");
         }
     }
 }
