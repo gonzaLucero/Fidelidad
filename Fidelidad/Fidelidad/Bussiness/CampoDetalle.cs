@@ -4,14 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fidelidad.Config
+namespace Hexacta.YPF.Fidelizacion.Core.Config
 {
     [Serializable]
-    public class CampoRegistro : RegistroBase
+    public class CampoDetalle : RegistroBase
     {
         public string Formato { get; set; }
-
-        public List<CampoRegistro> CamposHijo { get; set; }
-
     }
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Xml.Serialization;
 
-namespace Fidelidad.Config
+namespace Hexacta.YPF.Fidelizacion.Core.Config
 {
     [Serializable]
     public class RegistroBase

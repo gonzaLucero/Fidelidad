@@ -1,11 +1,11 @@
-﻿using Fidelidad.Config;
+﻿using Hexacta.YPF.Fidelizacion.Core.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fidelidad.Procesos
+namespace Hexacta.YPF.Fidelizacion.Core.Procesos
 {
     public static class GenerarLOARUBRO
     {
@@ -17,8 +17,8 @@ namespace Fidelidad.Procesos
                 OrigenDatos = "mockLOARUBRO",
                 IsUnixSaltoLinea = true
             };
-            archivo.CamposCabecera = GenerarCabecera();
-            archivo.CamposRegistro = GenerarRegistro();
+            archivo.Cabecera.Campos = GenerarCabecera();
+            archivo.Detalle.Campos = GenerarRegistro();
 
             return archivo;
         }
@@ -114,11 +114,11 @@ namespace Fidelidad.Procesos
             return cabeceraList;
         }
 
-        private static List<CampoRegistro> GenerarRegistro()
+        private static List<CampoDetalle> GenerarRegistro()
         {
-            List<CampoRegistro> registroList = new List<CampoRegistro>();
+            List<CampoDetalle> registroList = new List<CampoDetalle>();
 
-            CampoRegistro regsitro = new CampoRegistro()
+            CampoDetalle regsitro = new CampoDetalle()
             {
                 NombreCampo = "COD-RUBRO",
                 NombreBaseDeDatos = "CodigoRubro",
@@ -130,7 +130,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "DESCR",
                 NombreBaseDeDatos = "DescripcionRubro",
@@ -142,7 +142,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "DESCRC",
                 NombreBaseDeDatos = "DescripcionCortaRubro",
@@ -154,7 +154,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "COD-PG",
                 NombreBaseDeDatos = "CodigoProductoGenerico",
@@ -166,7 +166,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "ESTAR",
                 NombreBaseDeDatos = "EstadoRubro",
@@ -178,7 +178,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "TIPO-TARJ",
                 NombreBaseDeDatos = "TipoTarjeta",
@@ -190,7 +190,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "PROMOCION",
                 NombreBaseDeDatos = "CantMonedas",
@@ -202,7 +202,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "MAX-COMBUST-DIA-LITROS",
                 NombreBaseDeDatos = "MaxCombustible",
@@ -214,7 +214,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "MAX-RUBRO-DIA-MONEDA",
                 NombreBaseDeDatos = "MaxRubroDia",
@@ -226,7 +226,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "MAX-RUBRO-MES-MONEDA",
                 NombreBaseDeDatos = "MaxRubroMes",

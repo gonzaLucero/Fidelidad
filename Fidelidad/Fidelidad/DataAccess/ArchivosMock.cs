@@ -1,11 +1,11 @@
-﻿using Fidelidad.Config;
+﻿using Hexacta.YPF.Fidelizacion.Core.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fidelidad.DataAccess
+namespace Hexacta.YPF.Fidelizacion.Core.DataAccess
 {
     public static class ArchivosMock
     {

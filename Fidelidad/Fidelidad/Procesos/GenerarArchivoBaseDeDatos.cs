@@ -1,4 +1,4 @@
-﻿using Fidelidad.Config;
+﻿using Hexacta.YPF.Fidelizacion.Core.Config;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace Fidelidad.Procesos
+namespace Hexacta.YPF.Fidelizacion.Core.Procesos
 {
     public static class GenerarArchivoBaseDeDatos
     {
         public static void Generar(string NombreArchivo)
         {
-            var xml = XDocument.Load(Constantes.ArchivoDeConfiguracion + ".xml");
+            var xml = XDocument.Load(Constantes.ArchivoDeConfiguracion);
             var serializer = new XmlSerializer(typeof(List<Archivo>));
             var list = serializer.Deserialize(xml.Root.CreateReader());
 
@@ -24,7 +24,7 @@ namespace Fidelidad.Procesos
             {
                 DataSet dataSet = new DataSet();
                 DataTable dataTable = new DataTable();
-                foreach (var item in archivo.CamposCabecera)
+                foreach (var item in archivo.Cabecera.Campos)
                 {
                     DataColumn dataColumn = new DataColumn();
                     dataColumn.ColumnName = item.NombreBaseDeDatos;
@@ -33,7 +33,7 @@ namespace Fidelidad.Procesos
                 dataSet.Tables.Add(dataTable);
 
                 dataTable = new DataTable();
-                foreach (var item in archivo.CamposRegistro)
+                foreach (var item in archivo.Detalle.Campos)
                 {
                     DataColumn dataColumn = new DataColumn();
                     dataColumn.ColumnName = item.NombreBaseDeDatos;

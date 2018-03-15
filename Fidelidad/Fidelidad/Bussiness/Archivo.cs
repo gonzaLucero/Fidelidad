@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Fidelidad.Config
+namespace Hexacta.YPF.Fidelizacion.Core.Config
 {
     [Serializable]
     public class Archivo
@@ -19,8 +19,14 @@ namespace Fidelidad.Config
         [XmlAttribute]
         public bool IsUnixSaltoLinea { get; set; }
 
-        public List<CampoCabecera> CamposCabecera { get; set; }
+        public Cabecera Cabecera { get; set; }
 
-        public List<CampoRegistro> CamposRegistro { get; set; }
+        public Detalle Detalle { get; set; }
+
+        public Archivo()
+        {
+            Cabecera = new Cabecera();
+            Detalle = new Detalle();
+        }
     }
 }

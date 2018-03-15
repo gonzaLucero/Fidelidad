@@ -1,4 +1,4 @@
-﻿using Fidelidad.Config;
+﻿using Hexacta.YPF.Fidelizacion.Core.Config;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -7,14 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Fidelidad.Procesos
+namespace Hexacta.YPF.Fidelizacion.Core.Procesos
 {
     public static class GenerarConfiguracion
     {
         public static void Generar()
         {
             IList<Archivo> listConfig = GenerarArchivos();
-            FileInfo file = new FileInfo(Constantes.ArchivoDeConfiguracion + ".xml");
+            FileInfo file = new FileInfo(Constantes.ArchivoDeConfiguracion);
             StreamWriter sw = file.CreateText();
             XmlSerializer writer = new XmlSerializer(typeof(List<Archivo>));
             writer.Serialize(sw, listConfig);
@@ -33,6 +33,7 @@ namespace Fidelidad.Procesos
             listConfig.Add(GenerarLOATEXTO.Generar());
             listConfig.Add(GenerarLOAPROTT.Generar());
             listConfig.Add(GenerarLOATTARJ.Generar());
+            listConfig.Add(GenerarLOALIINH.Generar());
 
             return listConfig;
 

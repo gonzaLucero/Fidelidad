@@ -1,11 +1,11 @@
-﻿using Fidelidad.Config;
+﻿using Hexacta.YPF.Fidelizacion.Core.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fidelidad.Procesos
+namespace Hexacta.YPF.Fidelizacion.Core.Procesos
 {
     public static class GenerarLOAPRTTF
     {
@@ -18,8 +18,8 @@ namespace Fidelidad.Procesos
                 OrigenDatos = "mockLOAPRTTF",
                 IsUnixSaltoLinea = true
             };
-            archivo.CamposCabecera = GenerarCabecera();
-            archivo.CamposRegistro = GenerarRegistro();
+            archivo.Cabecera.Campos = GenerarCabecera();
+            archivo.Detalle.Campos = GenerarRegistro();
 
             return archivo;
         }
@@ -127,11 +127,11 @@ namespace Fidelidad.Procesos
             return cabeceraList;
         }
 
-        private static List<CampoRegistro> GenerarRegistro()
+        private static List<CampoDetalle> GenerarRegistro()
         {
-            List<CampoRegistro> registroList = new List<CampoRegistro>();
+            List<CampoDetalle> registroList = new List<CampoDetalle>();
 
-            CampoRegistro regsitro = new CampoRegistro()
+            CampoDetalle regsitro = new CampoDetalle()
             {
                 NombreCampo = "COD-PROD",
                 NombreBaseDeDatos = "CodigoProducto",
@@ -143,7 +143,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "TIPO-TARJ",
                 NombreBaseDeDatos = "TipoTarjeta",
@@ -155,7 +155,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "AUTORIZ",
                 NombreBaseDeDatos = "Autorizacion",
@@ -167,7 +167,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "FEDESDE",
                 NombreBaseDeDatos = "FechaDesde",
@@ -179,7 +179,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "FEHASTA",
                 NombreBaseDeDatos = "FechaHasta",
@@ -191,7 +191,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "HODESDE",
                 NombreBaseDeDatos = "HoraDesde",
@@ -203,7 +203,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "HOHASTA",
                 NombreBaseDeDatos = "HoraHasta",
@@ -215,7 +215,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "CANTM",
                 NombreBaseDeDatos = "CantidadMoneda",
@@ -227,7 +227,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "CANTD",
                 NombreBaseDeDatos = "Estado",
@@ -239,7 +239,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "PTOSREL",
                 NombreBaseDeDatos = "PuntosRelacion",
@@ -251,7 +251,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
 
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "COD-LISTA",
                 NombreBaseDeDatos = "CodigoLista",
@@ -263,7 +263,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(regsitro);
             
-            regsitro = new CampoRegistro()
+            regsitro = new CampoDetalle()
             {
                 NombreCampo = "COD-CRITE",
                 NombreBaseDeDatos = "CodigoCriterio",

@@ -1,5 +1,5 @@
-﻿using Fidelidad.Config;
-using Fidelidad.Procesos;
+﻿using Hexacta.YPF.Fidelizacion.Core.Config;
+using Hexacta.YPF.Fidelizacion.Core.Procesos;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Fidelidad
+namespace Core
 {
     class Program
     {

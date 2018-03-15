@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F1D7D274-220E-4605-AE93-DDFA28ABC86C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Fidelidad</RootNamespace>
-    <AssemblyName>Fidelidad</AssemblyName>
+    <RootNamespace>Hexacta.YPF.Fidelizacion.Core</RootNamespace>
+    <AssemblyName>Hexacta.YPF.Fidelizacion.Core</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,25 +42,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bussiness\Detalle.cs" />
+    <Compile Include="Bussiness\Cabecera.cs" />
     <Compile Include="Bussiness\Archivo.cs" />
     <Compile Include="Bussiness\CampoCabecera.cs" />
     <Compile Include="Common\FuncionalidadTarjetas.cs" />
     <Compile Include="Common\Constantes.cs" />
-    <Compile Include="Bussiness\CampoRegistro.cs" />
+    <Compile Include="Bussiness\CampoDetalle.cs" />
     <Compile Include="Bussiness\RegistroBase.cs" />
     <Compile Include="DataAccess\ArchivosMock.cs" />
     <Compile Include="Procesos\GenerarArchivoEESS.cs" />
     <Compile Include="Procesos\GenerarArchivoBaseDeDatos.cs" />
     <Compile Include="Procesos\GenerarConfiguracion.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOAPARAM.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOAMENSA.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOATTARJ.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOAPROTT.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOATEXTO.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOAPRTTF.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOARUBRO.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOAPRE.cs" />
-    <Compile Include="Procesos\Salida\Generadores\GenerarLOAFUNTT.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOAPARAM.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOAMENSA.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOALIINH.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOATTARJ.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOAPROTT.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOATEXTO.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOAPRTTF.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOARUBRO.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOAPRE.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOAFUNTT.cs" />
     <Compile Include="Procesos\LeerConfiguracion.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

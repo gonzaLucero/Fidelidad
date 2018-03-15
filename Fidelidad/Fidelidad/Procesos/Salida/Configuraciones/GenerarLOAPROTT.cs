@@ -1,11 +1,11 @@
-﻿using Fidelidad.Config;
+﻿using Hexacta.YPF.Fidelizacion.Core.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fidelidad.Procesos
+namespace Hexacta.YPF.Fidelizacion.Core.Procesos
 {
     public static class GenerarLOAPROTT
     {
@@ -18,8 +18,8 @@ namespace Fidelidad.Procesos
                 OrigenDatos = "mockLOAPROTT",
                 IsUnixSaltoLinea = true
             };
-            archivo.CamposCabecera = GenerarCabecera();
-            archivo.CamposRegistro = GenerarRegistro();
+            archivo.Cabecera.Campos = GenerarCabecera();
+            archivo.Detalle.Campos = GenerarRegistro();
 
             return archivo;
         }
@@ -127,11 +127,11 @@ namespace Fidelidad.Procesos
             return cabeceraList;
         }
 
-        private static List<CampoRegistro> GenerarRegistro()
+        private static List<CampoDetalle> GenerarRegistro()
         {
-            List<CampoRegistro> registroList = new List<CampoRegistro>();
+            List<CampoDetalle> registroList = new List<CampoDetalle>();
 
-            CampoRegistro registro = new CampoRegistro()
+            CampoDetalle registro = new CampoDetalle()
             {
                 NombreCampo = "COD-RUBRO",
                 NombreBaseDeDatos = "CodigoRubro",
@@ -143,7 +143,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "COD-PROD",
                 NombreBaseDeDatos = "CodigoProducto",
@@ -155,7 +155,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            CampoRegistro regsitro = new CampoRegistro()
+            CampoDetalle regsitro = new CampoDetalle()
             {
                 NombreCampo = "COD-BARRA",
                 NombreBaseDeDatos = "CodigoBarra",
@@ -167,7 +167,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "DESCR",
                 NombreBaseDeDatos = "DescripcionProducto",
@@ -179,7 +179,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "DESCRC",
                 NombreBaseDeDatos = "DescripcionCortaProducto",
@@ -191,7 +191,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "AUTORIZ",
                 NombreBaseDeDatos = "Autorizacion",
@@ -203,7 +203,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "CANTM",
                 NombreBaseDeDatos = "CantidadMoneda",
@@ -215,7 +215,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "LIM-MIN-PESOS",
                 NombreBaseDeDatos = "LimiteMinimoPesos",
@@ -227,7 +227,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "LIM-MIN-LITROS",
                 NombreBaseDeDatos = "LimiteMinimoLitros",
@@ -239,7 +239,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "LIM-MAX-PESOS",
                 NombreBaseDeDatos = "LimiteMaximoPesos",
@@ -251,7 +251,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "LIM-MAX-LITROS",
                 NombreBaseDeDatos = "LimiteMaximoLitros",
@@ -263,7 +263,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "PRIORI",
                 NombreBaseDeDatos = "Priori",
@@ -275,7 +275,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "ESTAP",
                 NombreBaseDeDatos = "EstadoProducto",
@@ -287,7 +287,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "PTOSREL",
                 NombreBaseDeDatos = "Estado",
@@ -299,7 +299,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "COD-LISTA",
                 NombreBaseDeDatos = "CodigoLista",
@@ -311,7 +311,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "COD-CRITE",
                 NombreBaseDeDatos = "CodigoCriterio",
@@ -323,7 +323,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "TIPO-TARJ",
                 NombreBaseDeDatos = "TipoTarjeta",
@@ -335,7 +335,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "LIM-DIA-MAX-PESO",
                 NombreBaseDeDatos = "LimiteMaxPesos",
@@ -347,7 +347,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "LIM-DIA-MAX-LITRO",
                 NombreBaseDeDatos = "LimiteMaxLitros",

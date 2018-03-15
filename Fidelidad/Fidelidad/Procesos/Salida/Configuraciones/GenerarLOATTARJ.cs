@@ -1,11 +1,11 @@
-﻿using Fidelidad.Config;
+﻿using Hexacta.YPF.Fidelizacion.Core.Config;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fidelidad.Procesos
+namespace Hexacta.YPF.Fidelizacion.Core.Procesos
 {
     public static class GenerarLOATTARJ
     {
@@ -18,8 +18,8 @@ namespace Fidelidad.Procesos
                 OrigenDatos = "mockLOATTARJ",
                 IsUnixSaltoLinea = true
             };
-            archivo.CamposCabecera = GenerarCabecera();
-            archivo.CamposRegistro = GenerarRegistro();
+            archivo.Cabecera.Campos = GenerarCabecera();
+            archivo.Detalle.Campos = GenerarRegistro();
 
             return archivo;
         }
@@ -91,11 +91,11 @@ namespace Fidelidad.Procesos
             return cabeceraList;
         }
 
-        private static List<CampoRegistro> GenerarRegistro()
+        private static List<CampoDetalle> GenerarRegistro()
         {
-            List<CampoRegistro> registroList = new List<CampoRegistro>();
+            List<CampoDetalle> registroList = new List<CampoDetalle>();
 
-            CampoRegistro registro = new CampoRegistro()
+            CampoDetalle registro = new CampoDetalle()
             {
                 NombreCampo = "TIPO-TARJ",
                 NombreBaseDeDatos = "TipoTarjeta",
@@ -107,7 +107,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "DESCR",
                 NombreBaseDeDatos = "DescripcionTipoTarjeta",
@@ -119,7 +119,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "NRODESDE",
                 NombreBaseDeDatos = "NumeroTarjetaDesde",
@@ -131,7 +131,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "NROHASTA",
                 NombreBaseDeDatos = "NumeroTarjetaHasta",
@@ -143,7 +143,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "FEDESDE",
                 NombreBaseDeDatos = "FechaDesde",
@@ -155,7 +155,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "FEHASTA",
                 NombreBaseDeDatos = "FechaHasta",
@@ -167,7 +167,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "FECADU",
                 NombreBaseDeDatos = "FechaCaducidad",
@@ -179,7 +179,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "VEN-PUNTOS",
                 NombreBaseDeDatos = "ConVencimientoPuntos",
@@ -191,7 +191,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "MAX-DIARIO",
                 NombreBaseDeDatos = "MaxPuntoDia",
@@ -203,7 +203,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "MAX-SIN-AUTORIZ",
                 NombreBaseDeDatos = "MaxPuntoSinAutoriz",
@@ -215,7 +215,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "IMPORTE-MAX",
                 NombreBaseDeDatos = "MaxImporte",
@@ -227,7 +227,7 @@ namespace Fidelidad.Procesos
             };
             registroList.Add(registro);
 
-            registro = new CampoRegistro()
+            registro = new CampoDetalle()
             {
                 NombreCampo = "PUNTAJE-MAX",
                 NombreBaseDeDatos = "MaxPuntaje",

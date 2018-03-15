@@ -1,4 +1,4 @@
-﻿using Fidelidad.Config;
+﻿using Hexacta.YPF.Fidelizacion.Core.Config;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Xml.Serialization;
 
-namespace Fidelidad.Procesos
+namespace Hexacta.YPF.Fidelizacion.Core.Procesos
 {
     public static class ObtenerConfiguracion
     {
@@ -16,7 +16,7 @@ namespace Fidelidad.Procesos
         {
             try
             {
-                var xml = XDocument.Load(Constantes.ArchivoDeConfiguracion + ".xml");
+                var xml = XDocument.Load(Constantes.ArchivoDeConfiguracion);
                 var serializer = new XmlSerializer(typeof(List<Archivo>));
                 var list = serializer.Deserialize(xml.Root.CreateReader());
                 var archivo = ((List<Archivo>)list).SingleOrDefault(arch => arch.Nombre == NombreArchivo);

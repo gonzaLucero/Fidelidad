@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Fidelidad.Config
+namespace Hexacta.YPF.Fidelizacion.Core.Config
 {
     public static class Constantes
     {
-        public const string ArchivoDeConfiguracion = @"..\..\Common\ConfigFiles\configFile";
+        public const string ArchivoDeConfiguracion = @"..\..\Common\ConfigFiles\configFile.xml";
 
         public const string DirectorioArchivosDeSalida = @"..\..\Procesos\Salida\Archivos\";
 
