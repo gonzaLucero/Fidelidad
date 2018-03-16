@@ -16,5 +16,7 @@ namespace Hexacta.YPF.Fidelizacion.Core.Config
 
         public const string UrlMockLOAPRE = @"..\..\DataAccess\mockLOAPRE.xml";
 
+        public const string UrlMockLOALIINH = @"..\..\DataAccess\mockLOALIINH.xml";
+
     }
 }

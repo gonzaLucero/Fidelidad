@@ -18,17 +18,19 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 OrigenDatos = "mockLOAPROTT",
                 IsUnixSaltoLinea = true
             };
-            archivo.Cabecera.Campos = GenerarCabecera();
-            archivo.Detalle.Campos = GenerarRegistro();
+            archivo.Cabecera = GenerarCabecera();
+            archivo.Detalle = GenerarRegistro();
 
             return archivo;
         }
 
-        private static List<CampoCabecera> GenerarCabecera()
+        private static Cabecera GenerarCabecera()
         {
-            List<CampoCabecera> cabeceraList = new List<CampoCabecera>();
-
-            CampoCabecera cabecera = new CampoCabecera()
+            Cabecera cabecera = new Cabecera();
+            cabecera.NombreTabla = "cabecera";
+            cabecera.Campos = new List<CampoCabecera>();
+            
+            CampoCabecera campoCabecera = new CampoCabecera()
             {
                 NombreCampo = "COD-EESS",
                 NombreBaseDeDatos = "CodigoEstacion",
@@ -38,9 +40,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            cabeceraList.Add(cabecera);
+            cabecera.Campos.Add(campoCabecera);
 
-            cabecera = new CampoCabecera()
+            campoCabecera = new CampoCabecera()
             {
                 NombreCampo = "FECHA",
                 NombreBaseDeDatos = "Fecha",
@@ -50,9 +52,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            cabeceraList.Add(cabecera);
+            cabecera.Campos.Add(campoCabecera);
 
-            cabecera = new CampoCabecera()
+            campoCabecera = new CampoCabecera()
             {
                 NombreCampo = "HORA",
                 NombreBaseDeDatos = "hora",
@@ -62,9 +64,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            cabeceraList.Add(cabecera);
+            cabecera.Campos.Add(campoCabecera);
 
-            cabecera = new CampoCabecera()
+            campoCabecera = new CampoCabecera()
             {
                 NombreCampo = "FRECAMBIO",
                 NombreBaseDeDatos = "FlagRecambio",
@@ -74,9 +76,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            cabeceraList.Add(cabecera);
+            cabecera.Campos.Add(campoCabecera);
 
-            cabecera = new CampoCabecera()
+            campoCabecera = new CampoCabecera()
             {
                 NombreCampo = "FECHA_APLI",
                 NombreBaseDeDatos = "FechaAplicacion",
@@ -86,9 +88,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            cabeceraList.Add(cabecera);
+            cabecera.Campos.Add(campoCabecera);
 
-            cabecera = new CampoCabecera()
+            campoCabecera = new CampoCabecera()
             {
                 NombreCampo = "HORA_APLI",
                 NombreBaseDeDatos = "horaAplicacion",
@@ -98,9 +100,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            cabeceraList.Add(cabecera);
+            cabecera.Campos.Add(campoCabecera);
 
-            cabecera = new CampoCabecera()
+            campoCabecera = new CampoCabecera()
             {
                 NombreCampo = "VERSIONACES",
                 NombreBaseDeDatos = "version",
@@ -110,9 +112,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            cabeceraList.Add(cabecera);
+            cabecera.Campos.Add(campoCabecera);
 
-            cabecera = new CampoCabecera()
+            campoCabecera = new CampoCabecera()
             {
                 NombreCampo = "COD-MONE",
                 NombreBaseDeDatos = "CodigoMoneda",
@@ -122,16 +124,18 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            cabeceraList.Add(cabecera);
+            cabecera.Campos.Add(campoCabecera);
 
-            return cabeceraList;
+            return cabecera;
         }
 
-        private static List<CampoDetalle> GenerarRegistro()
+        private static Detalle GenerarRegistro()
         {
-            List<CampoDetalle> registroList = new List<CampoDetalle>();
+            Detalle detalle = new Detalle();
+            detalle.NombreTabla = "registro";
+            detalle.Campos = new List<CampoDetalle>();
 
-            CampoDetalle registro = new CampoDetalle()
+            CampoDetalle campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "COD-RUBRO",
                 NombreBaseDeDatos = "CodigoRubro",
@@ -141,9 +145,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "COD-PROD",
                 NombreBaseDeDatos = "CodigoProducto",
@@ -153,7 +157,7 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
             CampoDetalle regsitro = new CampoDetalle()
             {
@@ -165,9 +169,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "DESCR",
                 NombreBaseDeDatos = "DescripcionProducto",
@@ -177,9 +181,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = ' ',
                 IsPadLeft = false
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "DESCRC",
                 NombreBaseDeDatos = "DescripcionCortaProducto",
@@ -189,9 +193,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = ' ',
                 IsPadLeft = false
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "AUTORIZ",
                 NombreBaseDeDatos = "Autorizacion",
@@ -201,9 +205,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "CANTM",
                 NombreBaseDeDatos = "CantidadMoneda",
@@ -213,9 +217,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "LIM-MIN-PESOS",
                 NombreBaseDeDatos = "LimiteMinimoPesos",
@@ -225,9 +229,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "LIM-MIN-LITROS",
                 NombreBaseDeDatos = "LimiteMinimoLitros",
@@ -237,9 +241,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "LIM-MAX-PESOS",
                 NombreBaseDeDatos = "LimiteMaximoPesos",
@@ -249,9 +253,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "LIM-MAX-LITROS",
                 NombreBaseDeDatos = "LimiteMaximoLitros",
@@ -261,9 +265,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "PRIORI",
                 NombreBaseDeDatos = "Priori",
@@ -273,9 +277,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "ESTAP",
                 NombreBaseDeDatos = "EstadoProducto",
@@ -285,9 +289,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "PTOSREL",
                 NombreBaseDeDatos = "Estado",
@@ -297,9 +301,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "COD-LISTA",
                 NombreBaseDeDatos = "CodigoLista",
@@ -309,9 +313,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "COD-CRITE",
                 NombreBaseDeDatos = "CodigoCriterio",
@@ -321,9 +325,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "TIPO-TARJ",
                 NombreBaseDeDatos = "TipoTarjeta",
@@ -333,9 +337,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "LIM-DIA-MAX-PESO",
                 NombreBaseDeDatos = "LimiteMaxPesos",
@@ -345,9 +349,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            registro = new CampoDetalle()
+            campoDetalle = new CampoDetalle()
             {
                 NombreCampo = "LIM-DIA-MAX-LITRO",
                 NombreBaseDeDatos = "LimiteMaxLitros",
@@ -357,9 +361,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                 PadCaracter = '0',
                 IsPadLeft = true
             };
-            registroList.Add(registro);
+            detalle.Campos.Add(campoDetalle);
 
-            return registroList;
+            return detalle;
         }
     }
 }

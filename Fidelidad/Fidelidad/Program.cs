@@ -15,8 +15,9 @@ namespace Core
         static void Main(string[] args)
         {
             GenerarConfiguracion.Generar();
-            GenerarArchivoBaseDeDatos.Generar("LOAFUNTT");
+            //GenerarArchivoBaseDeDatos.Generar("LOAFUNTT");
             GenerarArchivoEESS.Generar("LOAFUNTT");
+            GenerarArchivoEESS.Generar("LOALIINH");
         }
     }
 }

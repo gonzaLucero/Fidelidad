@@ -14,6 +14,7 @@ namespace Hexacta.YPF.Fidelizacion.Core.DataAccess
             Dictionary<string, string> dictionary = new Dictionary<string, string>();
             dictionary.Add("mockLOAFUNTT", Constantes.UrlMockLOAFUNTT);
             dictionary.Add("mockLOAPRE", Constantes.UrlMockLOAPRE);
+            dictionary.Add("mockLOALIINH", Constantes.UrlMockLOALIINH);
 
             return dictionary[NombreOrigen];
         }

@@ -86,8 +86,10 @@
   <ItemGroup>
     <Content Include="Common\ConfigFiles\configFile.xml" />
     <Content Include="DataAccess\mockLOAFUNTT.xml" />
+    <Content Include="DataAccess\mockLOALIINH.xml" />
     <Content Include="DataAccess\mockLOAPRE.xml" />
     <Content Include="Procesos\Salida\Archivos\LOAFUNTT.dsc" />
+    <Content Include="Procesos\Salida\Archivos\LOALIINH.dsc" />
     <Content Include="Procesos\Salida\Archivos\LOAPRE.dsc" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

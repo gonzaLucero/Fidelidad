@@ -12,6 +12,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Config
     {
         public List<CampoDetalle> Campos { get; set; }
 
+        [XmlAttribute]
+        public string NombreTabla { get; set; }
+
         public Detalle SubDetalle { get; set; }
     }
 }

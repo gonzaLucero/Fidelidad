@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ArrayOfArchivo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Archivo Nombre="LOAFUNTT" OrigenDatos="mockLOAFUNTT" IsUnixSaltoLinea="true">
-    <Cabecera>
+    <Cabecera NombreTabla="cabecera">
       <Campos>
         <CampoCabecera PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-EESS</NombreCampo>
@@ -40,7 +40,7 @@
         </CampoCabecera>
       </Campos>
     </Cabecera>
-    <Detalle>
+    <Detalle NombreTabla="registro">
       <Campos>
         <CampoDetalle PadCaracter="48" IsPadLeft="true">
           <NombreCampo>TIPO-TARJ</NombreCampo>
@@ -67,7 +67,7 @@
     </Detalle>
   </Archivo>
   <Archivo Nombre="LOARUBRO" OrigenDatos="mockLOARUBRO" IsUnixSaltoLinea="true">
-    <Cabecera>
+    <Cabecera NombreTabla="cabecera">
       <Campos>
         <CampoCabecera PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-EESS</NombreCampo>
@@ -120,7 +120,7 @@
         </CampoCabecera>
       </Campos>
     </Cabecera>
-    <Detalle>
+    <Detalle NombreTabla="registro">
       <Campos>
         <CampoDetalle PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-RUBRO</NombreCampo>
@@ -196,7 +196,7 @@
     </Detalle>
   </Archivo>
   <Archivo Nombre="LOAPRTTF" OrigenDatos="mockLOAPRTTF" IsUnixSaltoLinea="true">
-    <Cabecera>
+    <Cabecera NombreTabla="cabecera">
       <Campos>
         <CampoCabecera PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-EESS</NombreCampo>
@@ -256,7 +256,7 @@
         </CampoCabecera>
       </Campos>
     </Cabecera>
-    <Detalle>
+    <Detalle NombreTabla="registro">
       <Campos>
         <CampoDetalle PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-PROD</NombreCampo>
@@ -346,7 +346,7 @@
     </Detalle>
   </Archivo>
   <Archivo Nombre="LOAPARAM" OrigenDatos="mockLOAPARAM" IsUnixSaltoLinea="true">
-    <Cabecera>
+    <Cabecera NombreTabla="cabecera">
       <Campos>
         <CampoCabecera PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-EESS</NombreCampo>
@@ -399,7 +399,7 @@
         </CampoCabecera>
       </Campos>
     </Cabecera>
-    <Detalle>
+    <Detalle NombreTabla="registro">
       <Campos>
         <CampoDetalle PadCaracter="48" IsPadLeft="true">
           <NombreCampo>SECCION</NombreCampo>
@@ -433,7 +433,7 @@
     </Detalle>
   </Archivo>
   <Archivo Nombre="LOAMENSA" OrigenDatos="mockLOAMENSA" IsUnixSaltoLinea="true">
-    <Cabecera>
+    <Cabecera NombreTabla="cabecera">
       <Campos>
         <CampoCabecera PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-EESS</NombreCampo>
@@ -472,7 +472,7 @@
         </CampoCabecera>
       </Campos>
     </Cabecera>
-    <Detalle>
+    <Detalle NombreTabla="registro">
       <Campos>
         <CampoDetalle PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-MENSA</NombreCampo>
@@ -535,7 +535,7 @@
     </Detalle>
   </Archivo>
   <Archivo Nombre="LOATEXTO" OrigenDatos="mockLOATEXTO" IsUnixSaltoLinea="true">
-    <Cabecera>
+    <Cabecera NombreTabla="cabecera">
       <Campos>
         <CampoCabecera PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-EESS</NombreCampo>
@@ -574,7 +574,7 @@
         </CampoCabecera>
       </Campos>
     </Cabecera>
-    <Detalle>
+    <Detalle NombreTabla="registro">
       <Campos>
         <CampoDetalle PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-TEXTO</NombreCampo>
@@ -594,7 +594,7 @@
     </Detalle>
   </Archivo>
   <Archivo Nombre="LOAPROTT" OrigenDatos="mockLOAPROTT" IsUnixSaltoLinea="true">
-    <Cabecera>
+    <Cabecera NombreTabla="cabecera">
       <Campos>
         <CampoCabecera PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-EESS</NombreCampo>
@@ -654,7 +654,7 @@
         </CampoCabecera>
       </Campos>
     </Cabecera>
-    <Detalle>
+    <Detalle NombreTabla="registro">
       <Campos>
         <CampoDetalle PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-RUBRO</NombreCampo>
@@ -793,7 +793,7 @@
     </Detalle>
   </Archivo>
   <Archivo Nombre="LOATTARJ" OrigenDatos="mockLOATTARJ" IsUnixSaltoLinea="true">
-    <Cabecera>
+    <Cabecera NombreTabla="registro">
       <Campos>
         <CampoCabecera PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-EESS</NombreCampo>
@@ -832,7 +832,7 @@
         </CampoCabecera>
       </Campos>
     </Cabecera>
-    <Detalle>
+    <Detalle NombreTabla="registro">
       <Campos>
         <CampoDetalle PadCaracter="48" IsPadLeft="true">
           <NombreCampo>TIPO-TARJ</NombreCampo>
@@ -922,7 +922,7 @@
     </Detalle>
   </Archivo>
   <Archivo Nombre="LOALIINH" OrigenDatos="mockLOALIINH" IsUnixSaltoLinea="true">
-    <Cabecera>
+    <Cabecera NombreTabla="cabecera">
       <Campos>
         <CampoCabecera PadCaracter="48" IsPadLeft="true">
           <NombreCampo>COD-EESS</NombreCampo>
@@ -961,7 +961,7 @@
         </CampoCabecera>
       </Campos>
     </Cabecera>
-    <Detalle>
+    <Detalle NombreTabla="registro">
       <Campos>
         <CampoDetalle PadCaracter="48" IsPadLeft="true">
           <NombreCampo>T-LISTA</NombreCampo>
@@ -978,7 +978,7 @@
           <Offset>6</Offset>
         </CampoDetalle>
       </Campos>
-      <SubDetalle>
+      <SubDetalle NombreTabla="subRegistro">
         <Campos>
           <CampoDetalle PadCaracter="48" IsPadLeft="true">
             <NombreCampo>NTARJCLI</NombreCampo>

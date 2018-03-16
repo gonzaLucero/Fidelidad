@@ -11,5 +11,8 @@ namespace Hexacta.YPF.Fidelizacion.Core.Config
     public class Cabecera
     { 
         public List<CampoCabecera> Campos { get; set; }
+
+        [XmlAttribute]
+        public string NombreTabla { get; set; }
     }
 }

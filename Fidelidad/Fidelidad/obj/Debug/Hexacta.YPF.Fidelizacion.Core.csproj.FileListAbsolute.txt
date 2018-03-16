@@ -4,3 +4,4 @@ C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\bin\Debug\H
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\obj\Debug\Hexacta.YPF.Fidelizacion.Core.csproj.CoreCompileInputs.cache
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\obj\Debug\Hexacta.YPF.Fidelizacion.Core.exe
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\obj\Debug\Hexacta.YPF.Fidelizacion.Core.pdb
+C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Fidelidad\obj\Debug\Hexacta.YPF.Fidelizacion.Core.csprojResolveAssemblyReference.cache
