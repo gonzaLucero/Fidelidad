@@ -12,7 +12,6 @@ C:\Workspace\TFS\Fidelizacion\Hexacta.YPF.Fidelizacin.Solution\Hexacta.Core.Tool
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\build\Pragma.Core.Tools.CustomAppenders.dll.config
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\build\Pragma.Core.Tools.CustomAppenders.dll
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\build\Pragma.Core.Tools.CustomAppenders.pdb
-C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Hexacta.Core.Tools.CustomAppenders\obj\Debug\Hexacta.Core.Tools.CustomAppenders.csprojResolveAssemblyReference.cache
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Hexacta.Core.Tools.CustomAppenders\obj\Debug\Hexacta.Core.Tools.CustomAppenders.csproj.CoreCompileInputs.cache
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Hexacta.Core.Tools.CustomAppenders\obj\Debug\Pragma.Core.Tools.CustomAppenders.dll
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Hexacta.Core.Tools.CustomAppenders\obj\Debug\Pragma.Core.Tools.CustomAppenders.pdb

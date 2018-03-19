@@ -5,7 +5,6 @@ C:\Workspace\TFS\Fidelizacion\Hexacta.YPF.Fidelizacin.Solution\Hexacta.Core.Tool
 C:\Workspace\TFS\Fidelizacion\Hexacta.YPF.Fidelizacin.Solution\Hexacta.Core.Tools.Utilities.Interfaces\obj\Debug\Pragma.Core.Tools.Utilities.Interfaces.pdb
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\build\Pragma.Core.Tools.Utilities.Interfaces.dll
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\build\Pragma.Core.Tools.Utilities.Interfaces.pdb
-C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Hexacta.Core.Tools.Utilities.Interfaces\obj\Debug\Hexacta.Core.Tools.Utilities.Interfaces.csprojResolveAssemblyReference.cache
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Hexacta.Core.Tools.Utilities.Interfaces\obj\Debug\Hexacta.Core.Tools.Utilities.Interfaces.csproj.CoreCompileInputs.cache
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Hexacta.Core.Tools.Utilities.Interfaces\obj\Debug\Pragma.Core.Tools.Utilities.Interfaces.dll
 C:\Users\glucero\Documents\YPF\ServiClub\Example\Fidelidad\Hexacta.Core.Tools.Utilities.Interfaces\obj\Debug\Pragma.Core.Tools.Utilities.Interfaces.pdb

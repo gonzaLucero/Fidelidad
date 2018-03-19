@@ -23,9 +23,9 @@ namespace Core
             }
             GenerarConfiguracion.Generar();
 
-            LoggerUtility.Info("SVC_DEBUG", (object)string.Format("Generando {0}", nombreArchivo));
+            LoggerUtility.Debug("SVC_DEBUG", (object)string.Format("Generando {0}", nombreArchivo));
             GenerarArchivoEESS.Generar(nombreArchivo);
-            LoggerUtility.Info("SVC_DEBUG", (object)string.Format("{0} generado", nombreArchivo));
+            LoggerUtility.Debug("SVC_DEBUG", (object)string.Format("{0} generado", nombreArchivo));
         }
     }
 }
