@@ -21,10 +21,7 @@ namespace Core
                 return;
             }
             GenerarConfiguracion.Generar();
-            for (int i = 0; i < 1500; i++)
-            {
-                GenerarArchivoEESS.Generar(nombreArchivo);
-            }
+            GenerarArchivoEESS.Generar(nombreArchivo);
         }
     }
 }

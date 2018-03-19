@@ -54,6 +54,7 @@
     <Compile Include="Procesos\GenerarArchivoEESS.cs" />
     <Compile Include="Procesos\GenerarArchivoBaseDeDatos.cs" />
     <Compile Include="Procesos\GenerarConfiguracion.cs" />
+    <Compile Include="Procesos\Salida\Configuraciones\GenerarLOALISTA.cs" />
     <Compile Include="Procesos\Salida\Configuraciones\GenerarLOAPARAM.cs" />
     <Compile Include="Procesos\Salida\Configuraciones\GenerarLOAMENSA.cs" />
     <Compile Include="Procesos\Salida\Configuraciones\GenerarLOALIINH.cs" />
