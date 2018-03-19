@@ -60,9 +60,9 @@ namespace Hexacta.YPF.Fidelizacion.Core.Procesos
                         linea += campo;
                     }
                     lineas += linea + saltoLinea;
-                    var dataRelation = row.Table.ChildRelations[0];
-                    if (dataRelation != null)
+                    if (row.Table.ChildRelations.Count > 0)
                     {
+                        var dataRelation = row.Table.ChildRelations[0];
                         lineas += ObtenerRegistros(row.GetChildRows(dataRelation), detalle.SubDetalle);
                     }
                 }
