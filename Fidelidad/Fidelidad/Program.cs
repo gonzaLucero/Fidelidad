@@ -1,4 +1,5 @@
-﻿using Hexacta.YPF.Fidelizacion.Core.Config;
+﻿using Hexacta.Core.Tools.Utilities;
+using Hexacta.YPF.Fidelizacion.Core.Config;
 using Hexacta.YPF.Fidelizacion.Core.Procesos;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,10 @@ namespace Core
                 return;
             }
             GenerarConfiguracion.Generar();
+
+            LoggerUtility.Info("SVC_DEBUG", (object)string.Format("Generando {0}", nombreArchivo));
             GenerarArchivoEESS.Generar(nombreArchivo);
+            LoggerUtility.Info("SVC_DEBUG", (object)string.Format("{0} generado", nombreArchivo));
         }
     }
 }

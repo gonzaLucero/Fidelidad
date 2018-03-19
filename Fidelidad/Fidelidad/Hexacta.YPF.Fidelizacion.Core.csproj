@@ -95,5 +95,19 @@
     <Content Include="Procesos\Salida\Archivos\LOALIINH.dsc" />
     <Content Include="Procesos\Salida\Archivos\LOAPRE.dsc" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hexacta.Core.Tools.CustomAppenders\Hexacta.Core.Tools.CustomAppenders.csproj">
+      <Project>{51bb721d-a4b3-4641-9722-3c3cca8656e6}</Project>
+      <Name>Hexacta.Core.Tools.CustomAppenders</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexacta.Core.Tools.Utilities.Interfaces\Hexacta.Core.Tools.Utilities.Interfaces.csproj">
+      <Project>{efa93550-ae8d-414a-9358-819cbe964dfe}</Project>
+      <Name>Hexacta.Core.Tools.Utilities.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hexacta.Core.Tools.Utilities\Hexacta.Core.Tools.Utilities.csproj">
+      <Project>{e07ec194-13ec-4adf-bec4-4b4e9459c8b2}</Project>
+      <Name>Hexacta.Core.Tools.Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

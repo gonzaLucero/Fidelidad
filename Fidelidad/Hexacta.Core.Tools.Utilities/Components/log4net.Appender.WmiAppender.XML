@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>log4net.Appender.WmiAppender</name>
+    </assembly>
+    <members>
+        <member name="T:log4net.Appender.IWmiBoundEvent">
+            <summary>
+            Subclass of <see cref="T:System.Management.Instrumentation.IEvent"/> for events that need to bind to a <see cref="T:log4net.Core.LoggingEvent"/>
+            </summary>
+            <remarks>
+            <para>
+            If the <see cref="T:log4net.Core.LoggingEvent"/>.<see cref="P:log4net.Core.LoggingEvent.MessageObject"/> is
+            a <see cref="T:log4net.Appender.IWmiBoundEvent"/> then the default behavior of the <see cref="T:log4net.Appender.WmiLayout"/>
+            is to call the <see cref="M:log4net.Appender.IWmiBoundEvent.Bind(log4net.Core.LoggingEvent)"/> method passing the <see cref="T:log4net.Core.LoggingEvent"/>.
+            This allows the event object to capture additional data from the <see cref="T:log4net.Core.LoggingEvent"/>
+            before it is fired.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:log4net.Appender.IWmiBoundEvent.Bind(log4net.Core.LoggingEvent)">
+            <summary>
+            This method is called before this instance is fired
+            </summary>
+            <param name="loggingEvent">the <see cref="T:log4net.Core.LoggingEvent"/> containing the data</param>
+            <remarks>
+            <para>
+            The <see cref="T:log4net.Appender.WmiLayout"/> calls this method passing the <see cref="T:log4net.Core.LoggingEvent"/>
+            object. Implementors should capture any required data from the <paramref name="loggingEvent"/>
+            and store it in their instance prior to firing to WMI.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:log4net.Appender.WmiInstaller">
+            <summary>
+            Register this assembly with WMI
+            </summary>
+        </member>
+        <member name="T:log4net.Appender.WmiAppender">
+            <summary>
+            <see cref="T:log4net.Appender.WmiAppender"/> fires instrumented events for each <see cref="T:log4net.Core.LoggingEvent"/>
+            </summary>
+            <remarks>
+            <para>
+            This appender fires Windows Management Instrumentation (WMI) events for
+            each <see cref="T:log4net.Core.LoggingEvent"/>.
+            </para>
+            <para>
+            By default this appender fires <see cref="T:log4net.Appender.WmiLoggingEvent"/> objects, however 
+            this can be overridden by specifying a custom <see cref="P:log4net.Appender.WmiAppender.Layout"/> or by setting
+            the <see cref="T:log4net.Core.LoggingEvent"/>.<see cref="P:log4net.Core.LoggingEvent.MessageObject"/> to an
+            <see cref="T:System.Management.Instrumentation.IEvent"/> instance.
+            </para>
+            <para>
+            This assembly must be registered with WMI. Use the <c>InstallUtil</c> tool
+            shipped with the .NET framework to install this assembly. This will register
+            the <c>root/log4net</c> WMI namespace.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:log4net.Appender.WmiAppender.m_layout">
+            <summary>
+            The layout of this appender.
+            </summary>
+            <remarks>
+            See <see cref="P:log4net.Appender.WmiAppender.Layout"/> for more information.
+            </remarks>
+        </member>
+        <member name="F:log4net.Appender.WmiAppender.m_name">
+            <summary>
+            The name of this appender.
+            </summary>
+            <remarks>
+            See <see cref="P:log4net.Appender.WmiAppender.Name"/> for more information.
+            </remarks>
+        </member>
+        <member name="F:log4net.Appender.WmiAppender.m_threshold">
+            <summary>
+            The level threshold of this appender.
+            </summary>
+            <remarks>
+            <para>
+            There is no level threshold filtering by default.
+            </para>
+            <para>
+            See <see cref="P:log4net.Appender.WmiAppender.Threshold"/> for more information.
+            </para>
+            </remarks>
+        </member>
+        <member name="F:log4net.Appender.WmiAppender.m_errorHandler">
+            <summary>
+            It is assumed and enforced that errorHandler is never null.
+            </summary>
+            <remarks>
+            <para>
+            It is assumed and enforced that errorHandler is never null.
+            </para>
+            <para>
+            See <see cref="P:log4net.Appender.WmiAppender.ErrorHandler"/> for more information.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:log4net.Appender.WmiAppender.ActivateOptions">
+            <summary>
+            Activate this appender
+            </summary>
+            <remarks>
+            <para>
+            If a <see cref="P:log4net.Appender.WmiAppender.Layout"/> has not been specified then this
+            method will create a default <see cref="T:log4net.Appender.WmiLayout"/> instance.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:log4net.Appender.WmiAppender.Close">
+            <summary>
+            Close this appender
+            </summary>
+        </member>
+        <member name="M:log4net.Appender.WmiAppender.DoAppend(log4net.Core.LoggingEvent)">
+            <summary>
+            Process a <see cref="T:log4net.Core.LoggingEvent"/>
+            </summary>
+            <param name="loggingEvent">the <see cref="T:log4net.Core.LoggingEvent"/> containing the data</param>
+            <remarks>
+            <para>
+            Uses the <see cref="P:log4net.Appender.WmiAppender.Layout"/> to format the <paramref name="loggingEvent"/>
+            as an <see cref="T:System.Management.Instrumentation.IEvent"/>. This <see cref="T:System.Management.Instrumentation.IEvent"/> is then fired.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:log4net.Appender.WmiAppender.IsAsSevereAsThreshold(log4net.Core.Level)">
+            <summary>
+            Checks if the message level is below this appender's threshold.
+            </summary>
+        </member>
+        <member name="P:log4net.Appender.WmiAppender.Name">
+            <summary>
+            Gets or sets the name of this appender.
+            </summary>
+            <value>The name of the appender.</value>
+            <remarks>
+            <para>
+            The name uniquely identifies the appender.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:log4net.Appender.WmiAppender.Threshold">
+            <summary>
+            Gets or sets the threshold <see cref="T:log4net.Core.Level"/> of this appender.
+            </summary>
+            <value>
+            The threshold <see cref="T:log4net.Core.Level"/> of the appender. 
+            </value>
+            <remarks>
+            <para>
+            All log events with lower level than the threshold level are ignored 
+            by the appender.
+            </para>
+            <para>
+            In configuration files this option is specified by setting the
+            value of the <see cref="P:log4net.Appender.WmiAppender.Threshold"/> option to a level
+            string, such as "DEBUG", "INFO" and so on.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:log4net.Appender.WmiAppender.Layout">
+            <summary>
+            Gets or sets the <see cref="T:log4net.Appender.WmiLayout"/> for this appender.
+            </summary>
+            <value>The layout of the appender.</value>
+            <remarks>
+            <para>
+            The <see cref="T:log4net.Appender.WmiLayout"/> to use to format the
+            <see cref="T:log4net.Core.LoggingEvent"/> as an <see cref="T:System.Management.Instrumentation.IEvent"/>.
+            </para>
+            </remarks>
+        </member>
+        <member name="P:log4net.Appender.WmiAppender.ErrorHandler">
+            <summary>
+            Gets or sets the <see cref="T:log4net.Core.IErrorHandler"/> for this appender.
+            </summary>
+            <value>The <see cref="T:log4net.Core.IErrorHandler"/> of the appender</value>
+            <remarks>
+            <para>
+            The default value is a <see cref="!:OnlyOnceErrorHandler"/>.
+            </para>
+            </remarks>
+        </member>
+        <member name="T:log4net.Appender.WmiLoggingEvent">
+            <summary>
+            The default instrumented event raised by the <see cref="T:log4net.Appender.WmiAppender"/>
+            </summary>
+            <remarks>
+            <para>
+            This is the default event fired by the <see cref="T:log4net.Appender.WmiAppender"/>.
+            To fire a custom event set the <see cref="P:log4net.Appender.WmiAppender.Layout"/> to a
+            subclass of <see cref="T:log4net.Appender.WmiLayout"/> that overrides the <see cref="M:log4net.Appender.WmiLayout.CreateEvent(log4net.Core.LoggingEvent)"/>
+            method.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:log4net.Appender.WmiLayout.Format(log4net.Core.LoggingEvent)">
+            <summary>
+            Formats a <see cref="T:log4net.Core.LoggingEvent"/> for instrumentation
+            </summary>
+            <param name="loggingEvent">the <see cref="T:log4net.Core.LoggingEvent"/> containing the data</param>
+            <returns>an instrumentation event that can be fired</returns>
+            <remarks>
+            <para>
+            If the <see cref="P:log4net.Core.LoggingEvent.MessageObject"/> of the 
+            <paramref name="loggingEvent"/> is an <see cref="T:System.Management.Instrumentation.IEvent"/> then
+            that instance is returned. If the instance also implements the
+            <see cref="T:log4net.Appender.IWmiBoundEvent"/> interface then the <see cref="M:log4net.Appender.IWmiBoundEvent.Bind(log4net.Core.LoggingEvent)"/>
+            method will be called on the instance with the <paramref name="loggingEvent"/>
+            parameter.
+            </para>
+            <para>
+            If the <see cref="P:log4net.Core.LoggingEvent.MessageObject"/> of the 
+            <paramref name="loggingEvent"/> is not an <see cref="T:System.Management.Instrumentation.IEvent"/>
+            then the <see cref="M:log4net.Appender.WmiLayout.CreateEvent(log4net.Core.LoggingEvent)"/> method will be called
+            to create an appropriate instrumentation event object.
+            </para>
+            </remarks>
+        </member>
+        <member name="M:log4net.Appender.WmiLayout.CreateEvent(log4net.Core.LoggingEvent)">
+            <summary>
+            Create the <see cref="T:System.Management.Instrumentation.IEvent"/> instance that should be fired
+            </summary>
+            <param name="loggingEvent">the <see cref="T:log4net.Core.LoggingEvent"/> containing the data</param>
+            <returns>an instrumentation event that can be fired</returns>
+            <remarks>
+            <para>
+            The default implementation of this method creates a <see cref="T:log4net.Appender.WmiLoggingEvent"/>
+            instance using the data from the <paramref name="loggingEvent"/>.
+            </para>
+            <para>
+            Subclasses should override this method to return their own custom 
+            instrumentation event object.
+            </para>
+            </remarks>
+        </member>
+    </members>
+</doc>
+<!--
+<appender name="WmiAppender" type="log4net.Appender.WmiAppender,log4net.Appender.WmiAppender">
+</appender>
+-->
